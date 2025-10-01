@@ -1,51 +1,50 @@
-# Martinsite
+# Martin's website
 
-Martinsite là một dự án phát triển website cá nhân, sử dụng các công nghệ hiện đại để xây dựng một trang web chuyên nghiệp, tối ưu và dễ mở rộng.
+A personal website that combines blog and other features in the future.
 
-## Mục tiêu
+## 🌟 Features
 
-- Xây dựng website cá nhân để giới thiệu bản thân, dự án và kỹ năng.
-- Thêm vào chức năng của một blog từ đó có thể cập nhật thông tin mong muốn.
-- Tối ưu hiệu suất, bảo mật và trải nghiệm người dùng.
-- Dễ dàng mở rộng và bảo trì.
+- **Blogging**: Create blog
+- **Account Managing**: Manage users that use the website
 
-## Công nghệ sử dụng
+## 📋 Prerequisites
 
-- [Tên framework/language] Python, Flask
-- [Các thư viện/phần mềm liên quan] Boootstrap
-- [Công cụ quản lý mã nguồn] Git, GitHub
+- Python 3.7 or higher
+- Modern web browser
+- pip (Python package installer)
 
-## Cài đặt
+## 🚀 Quick Start
+
+### 1. Clone and Setup
 
 ```bash
 git clone https://github.com/MartinoPhoenixVox/martinsite.git
 cd martinsite
-npm install
-npm run dev
 ```
 
-Tạo môi trường để chạy web.
+### 2. Create and Activate Virtual Environment
+
 ```python3
 python3 -m venv .venv
 . .venv/bin/activate
 ```
 
-Cài đặt Flask và các extension liên quan.
+### 3. Install Flask and its required dependencies.
 ```python3
 pip install flask
 pip install Flask-SQLAlchemy
 pip install flask-login
 ```
 
-Chạy trang web với dòng lệnh bên dưới, sau đó vào http://127.0.0.1:5000.
+### 4. Use the code below to run the local website, then go to http://127.0.0.1:5000.
 ```python3
 python ./app.py
 ```
 
-## Cấu trúc dự án
+## 📁 Project Structure
 
-```plaintext
-.
+```
+martinsite/
 ├── website/
 │   ├── templates/
 │   │   ├── base.html
@@ -61,10 +60,18 @@ python ./app.py
 └── app.py
 ```
 
-## Giấy phép
+## 📝 License
 
-Dự án được phát hành theo giấy phép [MIT](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
+## 📞 Support
 
-> © 2025 MartinPhoenixVox. All rights reserved.
+If you encounter any issues or have questions:
+
+1. Search [existing issues](https://github.com/MartinoPhoenixVox/martinsite/issues)
+2. Create a [new issue](https://github.com/MartinoPhoenixVox/martinsite/issues/new)
+
+
+## 📈 Roadmap
+
+- [ ] ...
