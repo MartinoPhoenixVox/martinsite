@@ -8,10 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned Features
+- Post model
 - Database integration (SQLite/PostgreSQL)
 - Advanced reporting and analytics
 - Multiple language support
 - Email notifications
+
+## [0.0.2] - 2025-10-01
+
+### Added
+- Database integration (SQLite) - not complete
+- User model
+- Password-hashing
+
+### Changed
+- Update templates
+- Update CHANGELOG, README
 
 ## [0.0.1] - 2025-10-01
 
@@ -31,5 +43,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comprehensive README with quick start guide
 - Installation instructions
 - MIT license
-- Templates
 

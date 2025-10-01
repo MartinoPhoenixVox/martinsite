@@ -41,6 +41,15 @@ pip install flask-login
 python ./app.py
 ```
 
+## 🎯 Usage Examples
+
+### Login User
+```
+Email: abc@gmail.com
+Username: ABC
+Password: 1234567
+```
+
 ## 📁 Project Structure
 
 ```
@@ -56,6 +65,7 @@ martinsite/
 │   │   ├── signup.html
 │   ├── __init__.py
 │   ├── auth.py
+│   ├── models.py
 │   └── views.py
 └── app.py
 ```
