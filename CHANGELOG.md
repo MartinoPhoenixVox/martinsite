@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Multiple language support
 - Email notifications
 
-## [0.0.3] - 2025-10-02
+## [0.0.3] - 2025-10-03
 
 ### Added
 - Post model
