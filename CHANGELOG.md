@@ -8,11 +8,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned Features
-- Post model
 - Database integration (SQLite/PostgreSQL)
 - Advanced reporting and analytics
 - Multiple language support
 - Email notifications
+
+## [0.0.3] - 2025-10-02
+
+### Added
+- Post model
+- Create/Delete posts
+- View all users' posts
+- View a specific user's posts
+
+### Changed
+- Update templates logic
 
 ## [0.0.2] - 2025-10-01
 
