@@ -13,6 +13,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Multiple language support
 - Email notifications
 
+## [0.1.0] - 2025-10-09
+This release introduces the ability to **like and unlike posts** using asynchronous requests (AJAX) to prevent page refreshes. Also this ends the "Flask-Blog-Tutorial".
+
+### Added
+-   Implemented a **Like database model** to track which users have liked which posts, including relationships with the `User` and `Post` models.
+-   Added **Font Awesome** library to use dynamic icons for the like button.
+-   Added a **like counter** and a toggling **like button** (solid/hollow icon) to each post.
+-   Created a new `like-post` route and view function to handle the liking and unliking logic.
+-   Implemented **JavaScript (index.js)** to handle the like/unlike action via `fetch` requests, allowing the like count and button icon to update **without refreshing the page**.
+-   The backend now returns a **JSON response** with the updated like count and the user's like status, instead of a redirect.
+
+### Fixed
+-   Corrected a database query in the `like` view by adding `.first()` to ensure a single post object is retrieved from the filter.
+
+### Changed
+- Update CHANGELOG.
+
 ## [0.0.4] - 2025-10-03
 The focus of this release was the full implementation of **comment functionality** for posts.
 
@@ -24,7 +41,7 @@ The focus of this release was the full implementation of **comment functionality
 
 ### Changed
 -   Refactored the post fetching logic in the `post` route to use the efficient **SQLAlchemy relationship (`user.posts`)** instead of manually querying the `Post` table by author ID.
-- Update CHANGELOG
+- Update CHANGELOG.
 
 ## [0.0.3] - 2025-10-03
 

@@ -55,6 +55,8 @@ Password: 1234567
 ```
 martinsite/
 ├── website/
+│   ├── static/
+│   │   ├── index.js
 │   ├── templates/
 │   │   ├── base.html
 │   │   ├── create_post.html
@@ -74,6 +76,10 @@ martinsite/
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 🙏 Acknowledgments
+
+- [Flask-Blog-Tutorial](https://github.com/techwithtim/Flask-Blog-Tutorial) Thanks Tim Ruscica (Tech With Tim) for making the tutorial series and all the code in the tutorial.
+
 ## 📞 Support
 
 If you encounter any issues or have questions:
@@ -81,7 +87,6 @@ If you encounter any issues or have questions:
 1. Search [existing issues](https://github.com/MartinoPhoenixVox/martinsite/issues)
 2. Create a [new issue](https://github.com/MartinoPhoenixVox/martinsite/issues/new)
 
-
 ## 📈 Roadmap
 
-- [ ] ...
+- [x] Complete "Flask-Blog-Tutorial"
