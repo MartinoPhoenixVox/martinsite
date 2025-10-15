@@ -29,14 +29,16 @@ python3 -m venv .venv
 . .venv/bin/activate
 ```
 
-### 3. Install Flask and its required dependencies.
+### 3. Install Flask and its required dependencies
+
 ```python3
 pip install flask
 pip install Flask-SQLAlchemy
 pip install flask-login
 ```
 
-### 4. Use the code below to run the local website, then go to http://127.0.0.1:5000.
+### 4. Use the code below to run the local website, then go to [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
 ```python3
 python ./app.py
 ```
@@ -44,7 +46,8 @@ python ./app.py
 ## 🎯 Usage Examples
 
 ### Login User
-```
+
+``` Login User
 Email: abc@gmail.com
 Username: ABC
 Password: 1234567
@@ -52,7 +55,7 @@ Password: 1234567
 
 ## 📁 Project Structure
 
-```
+``` Project Structure
 martinsite/
 ├── website/
 │   ├── static/
@@ -96,12 +99,12 @@ If you encounter any issues or have questions:
 
 ## 🗂 Documentation & development flow
 
-This repository now includes living templates for a strict PLANNING → ANALYSIS → DESIGN → IMPLEMENTATION → MAINTENANCE flow under the `docs/` folder at the project root (`/martinsite/docs/`). Use these templates when starting any feature or change to keep work consistent and traceable.
+This repository now includes living templates for a strict PLANNING → ANALYSIS → DESIGN → IMPLEMENTATION → MAINTENANCE flow under the `docs/` folder at the project root (`/martinsite/docs/`). Use these templates when starting any feature or change to keep work consistent and traceable. Each feature will have their own folder `feature_name/` (name it with real feature).
 
 Quick usage:
 
-- Put public diagrams (UML/ER) in `website/static/docs/` (create that folder if missing). Example image path: `website/static/docs/er_diagram_v1.png`.
-- To embed diagrams in templates, use Jinja: `{{ url_for('static', filename='docs/er_diagram_v1.png') }}` when inside the `website` blueprint static folder.
+- Put public diagrams (UML/ER) in `website/static/docs/feature_name/` (create that folder if missing). Example image path: `website/static/docs/feature_name/er_diagram_v1.png`.
+- To embed diagrams in templates, use Jinja: `{{ url_for('static', filename='docs/feature_name/er_diagram_v1.png') }}` when inside the `website` blueprint static folder.
 - For private or large files you don't want in Git, use `docs/` plus external storage or Git LFS and link from the markdown templates.
 
-See `docs/README.md` for template overview and `docs/1-planning.md` → `docs/5-maintenance.md` for per-phase templates.
+See `docs/README.md` for template overview and `docs/feature_name/1-planning.md` → `docs/feature_name/5-maintenance.md` for per-phase templates.
