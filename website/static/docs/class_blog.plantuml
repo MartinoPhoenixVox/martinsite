@@ -1,0 +1,39 @@
+@startuml class_blog
+
+class User {
+  id: Integer - primary key
+  email: String[150] - unique
+  username: String[150] - unique
+  password: String[36]
+  date_created: DateTime
+}
+
+class Post {
+  id: Integer - primary key
+  text: Text - not null
+  date_created: DateTime
+  author: Integer - foreign key to User.id - not null
+}
+
+class Comment {
+  id: Integer - primary key
+  text: String[200] - not null
+  date_created: DateTime
+  author: Integer - foreign key to User.id - not null
+  post_id: Integer - foreign key to Post.id - not null
+}
+
+class Like {
+  id: Integer - primary key
+  date_created: DateTime
+  author: Integer - foreign key to User.id - not null
+  post_id: Integer - foreign key to Post.id - not null
+}
+
+User "1" -- "0...*" Post
+User "1" -- "0...*" Comment
+User "1" -- "0...*" Like
+Post "1" -- "0...*" Comment
+Post "1" -- "0...*" Like
+
+@enduml
