@@ -2,7 +2,7 @@
 
 Title: Blog
 Date: ...
-Owner: Martin Phoenix Võ
+Owner: Martinô Huỳnh Thanh Phương Võ
 
 ## System architecture
 

@@ -2,7 +2,7 @@
 
 Title: Blog
 Date: 2025-10-15
-Owner: Martin Phoenix Võ
+Owner: Martinô Huỳnh Thanh Phương Võ
 
 ## Goal
 
@@ -53,7 +53,7 @@ Out-of-scope (initial release)
 
 List owners, reviewers, and stakeholders.
 
-- Owner: Martin Phoenix Võ (product owner, final approver)
+- Owner: Martinô Huỳnh Thanh Phương Võ (product owner, final approver)
 - Contributors / Developers: project contributors who will implement features and reviews
 - Reviewers: designated code reviewers on GitHub (maintainers)
 - Users: site visitors and registered users (provide feedback / acceptance testing)
@@ -68,7 +68,7 @@ List owners, reviewers, and stakeholders.
 
 - Feature list and user stories documented in `docs/blog/` and tracked as issues/tickets.
 - Analysis document (`docs/blog/2-analysis.md`) with data model, edge cases, and acceptance criteria.
-- Design artifacts: ER diagram (`website/static/docs/er_diagram_v1.png`), UI wireframes, and API contract (endpoints + payloads).
+- Design artifacts: ER diagram (`website/static/docs/blog/er_diagram_v1.png`), UI wireframes, and API contract (endpoints + payloads).
 - Implementation branch with completed features, unit and integration tests, and a pull request containing the PR checklist.
 - Documentation updates: README, changelog entry, and in-repo docs for operations (uploads, backups, and media storage policy).
 - Deployment plan and rollback instructions.
