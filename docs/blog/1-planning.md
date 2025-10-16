@@ -67,7 +67,7 @@ List owners, reviewers, and stakeholders.
 - Success criteria
 
 - Feature list and user stories documented in `docs/blog/` and tracked as issues/tickets.
-- Analysis document (`docs/blog/2-analysis.md`) with data model, edge cases, and acceptance criteria.
+- Analysis document (`docs/blog/2-analysis.md`) with data model, edge cases, and acceptance criteria (using UML diagrams).
 - Design artifacts: ER diagram (`website/static/docs/blog/er_diagram_v1.png`), UI wireframes, and API contract (endpoints + payloads).
 - Implementation branch with completed features, unit and integration tests, and a pull request containing the PR checklist.
 - Documentation updates: README, changelog entry, and in-repo docs for operations (uploads, backups, and media storage policy).
@@ -109,10 +109,10 @@ Acceptance criteria (minimum measurable)
 
 ## Next Steps / Actions
 
-- [ ] Create Analysis doc
+- [x] Create Analysis doc [Analysis file](2-analysis.md)
 - [ ] Draft initial design (low-fi)
 
-- [ ] Create `docs/blog/2-analysis.md` and populate data model, edge cases, and detailed acceptance tests.
+- [x] Create `docs/blog/2-analysis.md` and populate data model, edge cases, and detailed acceptance tests.
 - [ ] Produce ER diagram and add to `website/static/docs/` as `er_diagram_v1.png`.
 - [ ] Choose Markdown renderer and sanitizer and document the chosen libraries and configuration.
 - [ ] Decide on media storage strategy (local store with limits vs. external S3/Cloud storage) and implement uploader.

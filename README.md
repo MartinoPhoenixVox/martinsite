@@ -2,10 +2,23 @@
 
 A personal website that combines blog and other features in the future.
 
+## 🇻🇦 Purpose
+
+This project is my small Catholic missionary effort to create a space for the pilgrims, who may or may not know The Lord - is The Father, and The Son, and The Holy Spirit. I want to encourage all of us come to God through The Bible and The Eucharist; to become better people, better Christians, better Catholics.
+
 ## 🌟 Features
 
-- **Blogging**: Create blog
-- **Account Managing**: Manage users that use the website
+With that thought, this project is a website where we can:
+
+- Read The Bible, Doctrine of The Catholic Church, spiritual books, and other helpful documents (Everyone can read those - Vietnamese first because I'm a Vietnamese - the documents are too much so it needs time).
+- Have an accounts, and introduce yourself, including your name, patron saints, strength, dreams, and more! I hope in this project, each account can customize the profile page.
+- Post your own blog or linked images or videos to your blog posts.
+- Comment on the posts, reply a comment.
+- Have emotion button to the posts.
+- Create discussions, attend through comments, react each comments.
+- Use all of the information to have more data-relevant features.
+- Have some games to play or some quiz to learn more about the Catholic knowledge.
+- Share what you love to the digital world!
 
 ## 📋 Prerequisites
 
@@ -57,9 +70,27 @@ Password: 1234567
 
 ``` Project Structure
 martinsite/
+├── docs/
+│   ├── blog/
+│   │   ├── 1-planning.md
+│   │   ├── 2-analysis.md
+│   │   ├── 3-design.md
+│   │   ├── 4-implementation.md
+│   │   └── 5-maintenance.md
+│   ├── README.md
+│   └── SWOT.md
+├── instance/
+│   └── database.db
 ├── website/
 │   ├── static/
-│   │   ├── index.js
+│   │   ├── css/
+│   │   ├── docs/
+│   │   │   ├── blog/
+│   │   │   │   └── class_blog.plantuml
+│   │   │   └── README.md
+│   │   ├── images/
+│   │   └── js/
+│   │       └── index.js
 │   ├── templates/
 │   │   ├── base.html
 │   │   ├── create_post.html
@@ -67,12 +98,17 @@ martinsite/
 │   │   ├── login.html
 │   │   ├── posts_div.html
 │   │   ├── posts.html
-│   │   ├── signup.html
+│   │   └── signup.html
 │   ├── __init__.py
 │   ├── auth.py
 │   ├── models.py
 │   └── views.py
-└── app.py
+├── .gitignore
+├── app.py
+├── CHANGELOG.md
+├── LICENSE
+├── README.md
+└── requirements.txt
 ```
 
 ## 📝 License
@@ -95,11 +131,16 @@ If you encounter any issues or have questions:
 ... &rarr; PLANNING &rarr; ANALYSIS &rarr; DESIGN &rarr; IMPLEMENTATION &rarr; MAINTENANCE &rarr; ...
 
 - [x] Complete "Flask-Blog-Tutorial"
-- [ ] blog feature planning
+- [ ] Blog feature
+- [ ] Document feature
+- [ ] Personal's space feature
+- [ ] Discussion feature
+- [ ] Quiz feature
+- [ ] Game feature
 
 ## 🗂 Documentation & development flow
 
-This repository now includes living templates for a strict PLANNING → ANALYSIS → DESIGN → IMPLEMENTATION → MAINTENANCE flow under the `docs/` folder at the project root (`/martinsite/docs/`). Use these templates when starting any feature or change to keep work consistent and traceable. Each feature will have their own folder `feature_name/` (name it with real feature).
+This repository now includes living templates for a strict PLANNING → ANALYSIS → DESIGN → IMPLEMENTATION → MAINTENANCE flow under the `docs/` folder at the project root (`/martinsite/docs/`). Use these templates when starting any feature or change to keep work consistent and traceable. Each feature will have their own folder `feature_name/` (name it with real features).
 
 Quick usage:
 
