@@ -4,4 +4,33 @@
 
 ## 🇻🇦 Mục đích
 
-Dự án này có mục đích cho những người lữ hành hy vọng hiểu biết thêm về Ba Ngôi Thiên Chúa, về đức tin Công Giáo, qua những tài liệu được đăng tải, từ đó mới yêu mến Thiên Chúa và sống sao cho vinh danh Thiên Chúa hơn.
+Dự án này [(martinsite)](https://github.com/MartinoPhoenixVox/martinsite) có mục đích cho những người lữ hành hy vọng hiểu biết thêm về Ba Ngôi Thiên Chúa, về đức tin Công Giáo, qua những tài liệu được đăng tải, từ đó mới yêu mến Thiên Chúa và sống sao cho vinh danh Thiên Chúa hơn.
+
+## 🛠️ Công nghệ
+
+- Frontend: HTML, CSS
+- Backend: JavaScript
+- Data: JSON
+- Hosting: Google Drive và DriveToWeb
+
+## 🌟 Tính năng
+
+Bạn có thể xem các tài liệu về Kinh Thánh, về đạo Công Giáo hoặc một số đề tài khác.
+
+## 📈 Roadmap
+
+- [ ] Giao diện cơ bản
+- [ ] Cấu trúc lưu trữ JSON
+- [ ] Xử lý bằng JavaScript
+- [ ] Sử dụng các file JSON đã có để phân tích dữ liệu và các hoạt động AI/ML khác...
+
+## 📞 Hỗ trợ
+
+Nếu bạn gặp phải vấn đề hoặc có bất kỳ câu hỏi nào:
+
+1. Tìm kiếm [những vấn đề đã tồn tại](https://github.com/MartinoPhoenixVox/martinsite/issues)
+2. Tạo một [vấn đề mới](https://github.com/MartinoPhoenixVox/martinsite/issues/new)
+
+## 📝 Giấy phép
+
+Dự án này được cấp phép dưới dạng MIT License - Xem thông tin chi tiết tại file [LICENSE](LICENSE).
