@@ -17,6 +17,13 @@ Dự án này [(martinsite)](https://github.com/MartinoPhoenixVox/martinsite) c�
 
 Bạn có thể xem các tài liệu về Kinh Thánh, về đạo Công Giáo hoặc một số đề tài khác.
 
+## 📁 Cấu trúc dự án
+
+``` Cấu trúc dự án
+www.martinsite.org/
+└── index.html
+```
+
 ## 📈 Roadmap
 
 - [ ] Giao diện cơ bản
