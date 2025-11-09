@@ -24,6 +24,10 @@ www.martinsite.org/
 └── index.html
 ```
 
+## Tiến trình phân tích và thiết kế hệ thống
+
+Xem chi tiết hơn tại [đây](System_Analysis_Design.md).
+
 ## 📈 Roadmap
 
 - [ ] Khảo sát dự án
