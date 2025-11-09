@@ -47,6 +47,16 @@ Trả lời cho các câu hỏi:
 - Hệ thống sẽ làm những gì?
 - Hệ thống được sử dụng ở đâu và khi nào?
 
+Biểu đồ phân cấp chức năng (Functional Hierachical Decomposition Diagram - FHD):
+
+Biểu đồ luồng dữ liệu (Data Flow Diagram - DFD):
+
+![Biểu đồ luồng dữ liệu](DFD.drawio.svg)
+
+Mô hình thực thể - liên kết (Entity Relationship Model):
+
+Mô hình quan hệ (Relational Database Model):
+
 ## 3. Thiết kế hệ thống
 
 - Thiết kế tổng thể: mô tả dữ liệu bằng mô hình mức ý niệm, vật lý
