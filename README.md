@@ -4,7 +4,7 @@
 
 ## 🇻🇦 Mục đích
 
-Dự án này [(martinsite)](https://github.com/MartinoPhoenixVox/martinsite) có mục đích cho những người lữ hành hy vọng hiểu biết thêm về Ba Ngôi Thiên Chúa, về đức tin Công Giáo, qua những tài liệu được đăng tải, từ đó mới yêu mến Thiên Chúa và sống sao cho vinh danh Thiên Chúa hơn.
+Dự án này [(martinsite)](https://github.com/MartinoPhoenixVox/martinsite) như một thư viện nhỏ, có mục đích cho những người lữ hành hy vọng hiểu biết thêm về Ba Ngôi Thiên Chúa, về đức tin Công Giáo, qua những tài liệu được đăng tải, từ đó mới yêu mến Thiên Chúa và sống sao cho vinh danh Thiên Chúa hơn.
 
 ## 🛠️ Công nghệ
 
@@ -26,6 +26,7 @@ www.martinsite.org/
 
 ## 📈 Roadmap
 
+- [ ] Khảo sát dự án
 - [ ] Giao diện cơ bản
 - [ ] Cấu trúc lưu trữ JSON
 - [ ] Xử lý bằng JavaScript
@@ -33,11 +34,14 @@ www.martinsite.org/
 
 ## 📞 Hỗ trợ
 
-Nếu bạn gặp phải vấn đề hoặc có bất kỳ câu hỏi nào:
+Nếu bạn gặp phải vấn đề hoặc có bất kỳ câu hỏi nào, bạn có thể:
 
-1. Tìm kiếm [những vấn đề đã tồn tại](https://github.com/MartinoPhoenixVox/martinsite/issues)
-2. Tạo một [vấn đề mới](https://github.com/MartinoPhoenixVox/martinsite/issues/new)
+- Tìm kiếm [những vấn đề đã tồn tại](https://github.com/MartinoPhoenixVox/martinsite/issues)
+
+Hoặc:
+
+- Tạo một [vấn đề mới](https://github.com/MartinoPhoenixVox/martinsite/issues/new)
 
 ## 📝 Giấy phép
 
-Dự án này được cấp phép dưới dạng MIT License - Xem thông tin chi tiết tại file [LICENSE](LICENSE).
+Dự án này được cấp phép dưới dạng MIT License - Xem thông tin chi tiết tại [LICENSE](LICENSE.md).
