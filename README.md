@@ -1,6 +1,6 @@
 # Martin's website
 
-> "Cả trái đất, hãy tung hô Thiên Chúa, đàn hát lên mừng Danh Thánh rạng ngời, nào dâng lời ca tụng tôn vinh !" (Tv 66,1-2)
+> "Cả trái đất, hãy tung hô Thiên Chúa, đàn hát lên mừng Danh Thánh rạng ngời, nào dâng lời ca tụng tôn vinh !" (Thánh vịnh 66,1-2)
 
 ## 🇻🇦 Mục đích
 
