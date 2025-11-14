@@ -40,7 +40,7 @@ www.martinsite.org/
 
 ## 🔄 Tiến trình phát triển
 
-Xem chi tiết hơn tại [đây](System_Analysis_Design.md).
+Xem chi tiết hơn tại [đây](SAD.md).
 
 ## 🌱 Khả năng phát triển trong tương lai
 
@@ -48,7 +48,8 @@ Những tài liệu được thêm vào bộ dữ liệu có thể được dùn
 
 ## 📈 Roadmap
 
-- [ ] Khảo sát dự án
+- [x] Khảo sát dự án
+- [ ] Phân tích dự án
 - [ ] Giao diện cơ bản
 - [ ] Cấu trúc lưu trữ JSON
 - [ ] Xử lý bằng JavaScript
