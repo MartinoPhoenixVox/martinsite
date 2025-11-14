@@ -23,12 +23,12 @@ Dự án này được truyền cảm hứng và có một số chi tiết học
 
 ## 🌟 Tính năng
 
-- Lưu trữ tài liệu (phía Admin)
-- Giới thiệu bản thân (phía Admin)
-- Xem tài liệu
-- In tài liệu
-- Phân loại tài liệu (phía Admin)
-- Điều chỉnh giao diện phù hợp với người dùng
+- [ ] Lưu trữ tài liệu (phía Admin)
+- [ ] Giới thiệu bản thân (phía Admin)
+- [ ] Xem tài liệu (phía người dùng)
+- [ ] In tài liệu (phía người dùng)
+- [ ] Phân loại tài liệu (phía Admin)
+- [ ] Điều chỉnh giao diện: sáng/tối, kích cỡ chữ (phía người dùng)
 
 ## 📁 Cấu trúc dự án
 
