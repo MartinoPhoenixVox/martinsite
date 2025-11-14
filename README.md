@@ -11,8 +11,9 @@ Dự án này [(martinsite)](https://github.com/MartinoPhoenixVox/martinsite) nh
 Dự án này được truyền cảm hứng và có một số chi tiết học hỏi từ các website sau:
 
 - Truyền cảm hứng bởi: Thánh Carlo Acutis, [Triển lãm các phép lạ Thánh Thể trên thế giới](https://www.miracolieucaristici.org/en/Liste/list.html)
-- Truyền cảm hứng và hỏi hỏi về cấu trúc trang web bởi: [Augustinô](https://augustino.net/)
+- Truyền cảm hứng và học hỏi về cấu trúc trang web bởi: [Augustinô](https://augustino.net/)
 - Học hỏi về cấu trúc tài liệu, chú thích, trích dẫn và mục 'Options' bởi: nhóm dịch [Witch Cult Translation](https://witchculttranslation.com/), website dịch web-novel Re:Zero từ tiếng Nhật sang tiếng Anh
+- Học hỏi về danh mục từ [Nhà sách Đức Bà Hòa Bình](https://ducbahoabinhbooks-osp.com/)
 
 ## 🛠️ Công nghệ
 

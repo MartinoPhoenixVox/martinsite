@@ -32,12 +32,12 @@ Kế hoạch SWOT cá nhân:
 
 | Mô tả bài toán |
 |:---:|
-| Người dùng được đưa vào trang chủ, nơi dẫn tới các trang khác. Trang này bao gồm các thông tin cơ ban của web và các tab dẫn tới các nội dung khác nhau. |
-| Trang thông tin người tạo web: như CV, bao gồm thông tin cơ bản, thông tin liên hệ, các dự án, các thành tựu,... Cái này tùy biến. |
-| Trang Tài liệu Công Giáo gồm nhiều mục tài liệu, ví dụ như Kinh Thánh, sách Tu đức,... Trang Khoa học máy tinh có gồm nhiều mục tài liệu như game, web, bảo mật,... |
-| Khi đuợc dẫn vào tài liệu, sẽ có thông tin cơ bản như tên tài liệu, tác giả, dịch giả, tên khác, thể loại, mô tả,... Cùng với đó là mục lục để người đọc khi bấm vào phần muốn đọc thì sẽ dẫn tới phần đó. Ngoài ra sẽ có nút in toàn bộ tác phẩm thành dạng pdf để người dùng tiện in ấn. Các thông tin cơ bản khi ấn vào thì dẫn đến các thông tin liên quan như wiki hoặc các trang uy tín. |
-| Khi vào phần muốn đọc, sẽ hiện ra tên tác phẩm, tên phần muốn đọc, nội dung. Các điều chỉnh sẽ là chế độ sách hoặc tối, điều chỉnh cỡ chữ, nút in phần đang đọc, nút đọc từ đầu, nút đọc phần trước, nút đọc phần tiếp theo, nút đọc phần mới nhất. |
-| Dữ liệu được lưu sao cho dùng được cho mục đích phân tích dữ liệu hoặc AI/ML. |
+| Người dùng được đưa vào trang chủ. Trang này bao gồm các thông tin cơ bản của web và dẫn tới các nội dung khác nhau. |
+| Trang thông tin người tạo web: có cấu trúc như một CV, bao gồm thông tin cơ bản, thông tin liên hệ, các dự án, các thành tựu,... Cái này tùy biến. |
+| Trang Tài liệu Công Giáo gồm nhiều danh mục, ví dụ như Thánh Kinh, Sách thiêng liêng, Thần học, Triết học,... Trang Khoa học máy tinh có gồm nhiều danh mục như game, web, bảo mật,... |
+| Khi đuợc dẫn vào tài liệu, sẽ có thông tin cơ bản như tên tài liệu, tác giả, dịch giả, tên khác, thể loại, mô tả,... Cùng với đó là mục lục để người đọc khi bấm vào phần muốn đọc thì sẽ dẫn tới phần đó. Ngoài ra sẽ có nút in toàn bộ tác phẩm thành dạng pdf để người dùng tiện in ấn. Các thông tin cơ bản khi ấn vào thì dẫn đến các thông tin liên quan như wiki hoặc các trang có liên quan và có uy tín. |
+| Khi vào phần muốn đọc, sẽ hiện ra tên tác phẩm, tên phần muốn đọc, nội dung. Các điều chỉnh sẽ là chế độ sách hoặc tối, điều chỉnh cỡ chữ, nút in phần đang đọc, nút đọc phần đầu, nút đọc phần trước, nút đọc phần tiếp theo, nút đọc phần mới nhất, nút đọc từ đầu. |
+| Dữ liệu được lưu có thể dùng được cho mục đích phân tích dữ liệu hoặc AI/ML. |
 
 ## 2. Phân tích hệ thống
 
