@@ -4,11 +4,11 @@
 
 ## 🇻🇦 Mục đích
 
-Dự án này [(martinsite)](https://github.com/MartinoPhoenixVox/martinsite) như một thư viện nhỏ, có mục đích cho những người lữ hành hy vọng hiểu biết thêm về Ba Ngôi Thiên Chúa, về đức tin Công Giáo, qua những tài liệu được đăng tải, từ đó mới yêu mến Thiên Chúa và sống sao cho vinh danh Thiên Chúa hơn.
+Dự án này [(martinsite)](https://github.com/MartinoPhoenixVox/martinsite) hoạt động như một thư viện điện tử , cùng với một số chức năng khác trong tương lai, nhằm nâng cao kiến thức cho những ai tìm đến, từ đó nhận biết và yêu mến Thiên Chúa hơn.
 
-## 💡 Inspired
+## 💡 Ý tưởng
 
-Dự án này được truyền cảm hứng và có một số chi tiết học hỏi từ các website sau:
+Dự án này được truyền cảm hứng và có một số chi tiết học hỏi từ các nội dung sau:
 
 - Truyền cảm hứng bởi: Thánh Carlo Acutis, [Triển lãm các phép lạ Thánh Thể trên thế giới](https://www.miracolieucaristici.org/en/Liste/list.html)
 - Truyền cảm hứng và học hỏi về cấu trúc trang web bởi: [Augustinô](https://augustino.net/)
@@ -17,10 +17,10 @@ Dự án này được truyền cảm hứng và có một số chi tiết học
 
 ## 🛠️ Công nghệ
 
-- Frontend: HTML, CSS
+- Frontend: HTML, CSS, Javascript
 - Backend: JavaScript
-- Data: JSON
-- Hosting: Google Drive và DriveToWeb
+- Data: SQlite3
+- Hosting: GitHub Pages
 
 ## 🌟 Tính năng
 
@@ -44,14 +44,14 @@ Xem chi tiết hơn tại [đây](SAD.md).
 
 ## 🌱 Khả năng phát triển trong tương lai
 
-Những tài liệu được thêm vào bộ dữ liệu có thể được dùng để nghiên cứu trong lãnh vực Khoa học dữ liệu.
+Những tài liệu được thêm vào cơ sở dữ liệu có thể được dùng để nghiên cứu trong lãnh vực Khoa học dữ liệu.
 
 ## 📈 Roadmap
 
 - [x] Khảo sát dự án
 - [ ] Phân tích dự án
 - [ ] Giao diện cơ bản
-- [ ] Cấu trúc lưu trữ JSON
+- [ ] Cơ sở dữ liệu SQLite3
 - [ ] Xử lý bằng JavaScript
 - [ ] Sử dụng các file JSON đã có để phân tích dữ liệu và các hoạt động AI/ML khác...
 
