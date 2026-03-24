@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "CÁC BƯỚC XƯNG TỘI"
 author: "Xứ Đoàn Đức Maria - Mẹ Thiên Chúa"
 category: "Tài liệu khác"

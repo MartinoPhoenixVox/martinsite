@@ -1,4 +1,28 @@
-title: Thư Viện Sách Của Tôi
-description: Nơi lưu trữ và phân tích dữ liệu các tác phẩm văn học.
-theme: jekyll-theme-WuK
+title: Martinsite
+description: Nơi lưu trữ và phân tích dữ liệu các tác phẩm.
+theme: minima
 markdown: kramdown
+
+collections:
+  books:
+    output: true
+    permalink: /books/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "books"
+    values:
+      layout: "post"
+
+collections:
+  document:
+    output: true
+    permalink: /document/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "document"
+    values:
+      layout: "post"
