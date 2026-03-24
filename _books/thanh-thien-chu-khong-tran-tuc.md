@@ -17,7 +17,7 @@ THÁNH THIỆN chứ không TRẦN TỤC
 
 ## Danh sách các chương
 <ul>
-  {% assign chapters = site.sach | filter: "book_id", page.book_id | sort: "order" %}
+  {% assign chapters = site.books | filter: "book_id", page.book_id | sort: "order" %}
   {% for chapter in chapters %}
     {% if chapter.is_chapter %}
       <li><a href="{{ chapter.url | relative_url }}">{{ chapter.title }}</a></li>
