@@ -3,7 +3,7 @@ layout: default
 title: Trang chủ Thư viện
 ---
 
-# Danh sách sách theo danh mục
+# Sách theo danh mục
 
 {% assign all_books = site.books | where_exp: "item", "item.is_chapter != true" | group_by: "category" %}
 
