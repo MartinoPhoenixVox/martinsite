@@ -5,7 +5,7 @@ title: Trang chủ Thư viện
 
 # Danh sách sách theo danh mục
 
-{% assign books_by_category = site.sach | group_by: "category" %}
+{% assign books_by_category = site.books | group_by: "category" %}
 
 {% for group in books_by_category %}
   ## {{ group.name | default: "Chưa phân loại" }}
