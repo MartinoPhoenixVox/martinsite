@@ -2,17 +2,50 @@
 layout: default
 ---
 <article class="post">
-  <header class="post-header" style="text-align: center; margin-bottom: 40px;">
+  
+  <div class="chapter-nav-top">
+    {% assign all_items = site.sach | where: "book_id", page.book_id | where: "is_chapter", true | sort: "order" %}
+    {% for item in all_items %}
+      {% if item.url == page.url %}
+        {% assign current_index = forloop.index0 %}
+        {% assign prev_index = current_index | minus: 1 %}
+        {% assign next_index = current_index | plus: 1 %}
+        
+        <div class="nav-container">
+          {% if prev_index >= 0 %}
+            <a href="{{ all_items[prev_index].url | relative_url }}" class="nav-btn">« Chương trước</a>
+          {% else %}
+            <span class="nav-btn disabled">« Đầu sách</span>
+          {% endif %}
+
+          <span class="nav-title">{{ page.title | truncate: 20 }}</span>
+
+          {% if next_index < all_items.size %}
+            <a href="{{ all_items[next_index].url | relative_url }}" class="nav-btn">Chương sau »</a>
+          {% else %}
+            <span class="nav-btn disabled">Hết sách »</span>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <header class="post-header" style="text-align: center; margin-top: 80px; margin-bottom: 40px;">
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
-  <div class="fixed-reader-controls" id="readerControls">
-    <button class="settings-toggle" onclick="toggleReaderSettings()">
-      <span class="icon">&#9881;</span> </button>
+  <div id="book-content" class="book-body">
+    {{ content }}
+  </div>
 
+  <button id="backToTop" class="floating-btn scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    ↑
+  </button>
+
+  <div class="fixed-reader-controls" id="readerControls">
+    <button class="settings-toggle" onclick="toggleReaderSettings()">⚙</button>
     <div class="settings-menu" id="settingsMenu">
-      <div class="menu-header">Tùy Chỉnh Đọc</div>
-      
+      <div class="menu-header">Tùy Chỉnh</div>
       <div class="menu-section">
         <span class="label">Cỡ Chữ:</span>
         <div class="button-group">
@@ -21,164 +54,137 @@ layout: default
           <button onclick="changeFontSize('increase')">A+</button>
         </div>
       </div>
-
-      <div class="menu-section">
-        <button class="reset-button" onclick="changeFontSize('reset')">Đặt lại mặc định</button>
-      </div>
+      <button class="reset-button" onclick="saveBookmark()">Lưu dấu trang tại đây</button>
     </div>
-  </div>
-
-  <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
-
-  <div id="book-content" style="
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.8;
-    color: #333;
-    font-size: 18px;
-    transition: font-size 0.2s ease;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 0 15px;
-  ">
-    {{ content }}
   </div>
 
 </article>
 
 <style>
-  /* Container chính dính góc */
-  .fixed-reader-controls {
+  /* 1. CSS THANH ĐIỀU HƯỚNG TRÊN ĐẦU */
+  .chapter-nav-top {
     position: fixed;
-    bottom: 30px; /* Cách đáy 30px */
-    left: 20px;   /* Cách lề trái 20px */
-    z-index: 1000; /* Luôn nằm trên cùng */
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #ddd;
+    z-index: 1001;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  .nav-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .nav-btn {
+    text-decoration: none;
+    color: #0366d6;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+  }
+  .nav-btn.disabled { color: #ccc; cursor: not-allowed; }
+  .nav-title { font-size: 13px; color: #666; font-style: italic; }
+
+  /* 2. CSS NỘI DUNG SÁCH & DẤU TRANG */
+  .book-body {
+    text-align: justify;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+  }
+  .bookmark-indicator {
+    position: absolute;
+    left: -20px;
+    color: red;
+    font-size: 20px;
   }
 
-  /* Nút bánh răng toggle */
-  .settings-toggle {
-    background-color: white;
-    border: 1px solid #ddd;
-    color: #555;
-    width: 50px;
-    height: 50px;
+  /* 3. CSS NÚT QUAY LẠI ĐẦU TRANG */
+  .floating-btn {
+    position: fixed;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: all 0.3s;
-    display: flex;
+    z-index: 1000;
+    display: none; /* Ẩn mặc định, hiện khi scroll */
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 20px;
   }
-  .settings-toggle:hover {
-    background-color: #f0f0f0;
-    transform: rotate(45deg); /* Hiệu ứng xoay khi hover */
-  }
+  .scroll-top { bottom: 30px; right: 20px; }
 
-  /* Menu cài đặt (ẩn mặc định) */
-  .settings-menu {
-    display: none; /* Mặc định ẩn */
-    position: absolute;
-    bottom: 65px; /* Nằm trên nút bánh răng */
-    left: 0;
-    background-color: white;
-    width: 200px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  }
-  
-  /* Hiện menu khi có class .open */
-  .fixed-reader-controls.open .settings-menu {
-    display: block;
-  }
-
-  /* Chi tiết menu */
-  .menu-header {
-    font-weight: 700;
-    font-size: 14px;
-    color: #333;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-  }
-  .menu-section { margin-bottom: 15px; }
-  .label { font-size: 13px; color: #666; font-weight: 600; display: block; margin-bottom: 5px; }
-  
-  /* Nhóm nút chỉnh cỡ */
-  .button-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #f8f9fa;
-    border-radius: 6px;
-    padding: 5px;
-  }
-  .button-group button {
-    background-color: white;
-    border: 1px solid #d1d5da;
-    border-radius: 4px;
-    color: #333;
-    cursor: pointer;
-    padding: 5px 12px;
-    font-size: 14px;
-  }
-  #current-size-display { font-weight: bold; font-size: 14px; color: #333; min-width: 45px; text-align: center; }
-  
-  /* Nút reset */
-  .reset-button {
-    width: 100%;
-    background: none;
-    border: 1px solid #0366d6;
-    color: #0366d6;
-    padding: 6px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 12px;
-  }
+  /* Giữ nguyên CSS cũ của Widget bên trái từ bản trước... */
+  .fixed-reader-controls { position: fixed; bottom: 30px; left: 20px; z-index: 1000; }
+  .settings-toggle { background: white; border: 1px solid #ddd; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+  .settings-menu { display: none; position: absolute; bottom: 60px; left: 0; background: white; width: 180px; padding: 15px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+  .fixed-reader-controls.open .settings-menu { display: block; }
+  .button-group { display: flex; gap: 10px; align-items: center; margin-top: 5px; }
+  .reset-button { width: 100%; margin-top: 10px; cursor: pointer; background: #f0f0f0; border: 1px solid #ddd; padding: 5px; font-size: 12px; }
 </style>
 
 <script>
-  let currentZoom = 100; // 100%
-  const contentDiv = document.getElementById('book-content');
-  const sizeDisplay = document.getElementById('current-size-display');
-  const controlsDiv = document.getElementById('readerControls');
-
-  // Toggle ẩn hiện menu
-  function toggleReaderSettings() {
-    controlsDiv.classList.toggle('open');
-  }
-
-  // Đóng menu khi bấm ra ngoài
-  document.addEventListener('click', function(event) {
-    if (!controlsDiv.contains(event.target)) {
-      controlsDiv.classList.remove('open');
+  // A. LOGIC HIỆN NÚT BACK TO TOP
+  window.onscroll = function() {
+    const btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btn.style.display = "flex";
+    } else {
+      btn.style.display = "none";
     }
-  });
+  };
 
-  // Xử lý đổi cỡ chữ
-  function updateDisplay() {
-    contentDiv.style.fontSize = currentZoom + "%";
-    sizeDisplay.innerText = currentZoom + "%";
-    localStorage.setItem('preferredFontSize', currentZoom);
+  // B. LOGIC LƯU DẤU TRANG (BOOKMARK)
+  const bookId = "{{ page.book_id }}";
+  
+  function saveBookmark() {
+    const scrollPos = window.scrollY;
+    localStorage.setItem('bookmark_' + bookId, scrollPos);
+    alert("Đã lưu vị trí đọc!");
   }
 
-  function changeFontSize(action) {
-    if (action === 'increase' && currentZoom < 250) currentZoom += 10;
-    else if (action === 'decrease' && currentZoom > 50) currentZoom -= 10;
-    else if (action === 'reset') currentZoom = 100;
-    updateDisplay();
-  }
-
-  // Tự động áp dụng khi load trang
-  window.addEventListener('DOMContentLoaded', (event) => {
+  // Tự động cuộn đến vị trí cũ khi vào lại chương
+  window.addEventListener('load', () => {
+    const savedPos = localStorage.getItem('bookmark_' + bookId);
+    if (savedPos) {
+      // Đợi một chút để trang load xong rồi cuộn
+      setTimeout(() => {
+        window.scrollTo({ top: parseInt(savedPos), behavior: 'smooth' });
+      }, 500);
+    }
+    
+    // Áp dụng cỡ chữ cũ
     const savedSize = localStorage.getItem('preferredFontSize');
     if (savedSize) {
-      currentZoom = parseInt(savedSize);
-      updateDisplay();
+      document.getElementById('book-content').style.fontSize = savedSize + "%";
+      document.getElementById('current-size-display').innerText = savedSize + "%";
     }
   });
+
+  // C. LOGIC WIDGET CỠ CHỮ
+  function toggleReaderSettings() { document.getElementById('readerControls').classList.toggle('open'); }
+  function changeFontSize(action) {
+    let content = document.getElementById('book-content');
+    let display = document.getElementById('current-size-display');
+    let currentZoom = parseInt(display.innerText);
+    if (action === 'increase') currentZoom += 10;
+    else if (action === 'decrease') currentZoom -= 10;
+    else currentZoom = 100;
+    content.style.fontSize = currentZoom + "%";
+    display.innerText = currentZoom + "%";
+    localStorage.setItem('preferredFontSize', currentZoom);
+  }
 </script>
