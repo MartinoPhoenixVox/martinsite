@@ -4,9 +4,6 @@ layout: default
 <article class="post">
   
   <div class="chapter-nav-top">
-    {% comment %} 
-      LẤY TẤT CẢ FILE CÙNG BOOK_ID, LỌC RA NHỮNG FILE CÓ ORDER RỒI MỚI SORT 
-    {% endcomment %}
     {% assign all_in_book = site.books | where: "book_id", page.book_id %}
     {% assign all_items = all_in_book | where_exp: "item", "item.order != nil" | sort: "order" %}
     
@@ -16,21 +13,12 @@ layout: default
           {% assign current_index = forloop.index0 %}
           {% assign prev_index = current_index | minus: 1 %}
           {% assign next_index = current_index | plus: 1 %}
-          
           <div class="nav-container">
-            {% if prev_index >= 0 %}
-              <a href="{{ all_items[prev_index].url | relative_url }}" class="nav-btn">« Trước</a>
-            {% else %}
-              <span class="nav-btn disabled">« Đầu</span>
-            {% endif %}
-
+            {% if prev_index >= 0 %}<a href="{{ all_items[prev_index].url | relative_url }}" class="nav-btn">« Trước</a>
+            {% else %}<span class="nav-btn disabled">« Đầu</span>{% endif %}
             <span class="nav-title">{{ page.title | truncate: 15 }}</span>
-
-            {% if next_index < all_items.size %}
-              <a href="{{ all_items[next_index].url | relative_url }}" class="nav-btn">Sau »</a>
-            {% else %}
-              <span class="nav-btn disabled">Hết »</span>
-            {% endif %}
+            {% if next_index < all_items.size %}<a href="{{ all_items[next_index].url | relative_url }}" class="nav-btn">Sau »</a>
+            {% else %}<span class="nav-btn disabled">Hết »</span>{% endif %}
           </div>
         {% endif %}
       {% endfor %}
@@ -45,14 +33,21 @@ layout: default
     {{ content }}
   </div>
 
-  <button id="backToTop" class="floating-btn scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-    ↑
-  </button>
+  <button id="backToTop" class="floating-btn scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
   <div class="fixed-reader-controls" id="readerControls">
     <button class="settings-toggle" onclick="toggleReaderSettings()">⚙</button>
     <div class="settings-menu" id="settingsMenu">
-      <div class="menu-header">Tùy Chỉnh</div>
+      <div class="menu-header">Tùy Chỉnh Đọc</div>
+      
+      <div class="menu-section">
+        <span class="label">Chế Độ:</span>
+        <div class="theme-switch-wrapper">
+            <button onclick="setTheme('light')" class="theme-btn" id="btn-light">☀️ Sáng</button>
+            <button onclick="setTheme('dark')" class="theme-btn" id="btn-dark">🌙 Tối</button>
+        </div>
+      </div>
+
       <div class="menu-section">
         <span class="label">Cỡ Chữ:</span>
         <div class="button-group">
@@ -61,114 +56,73 @@ layout: default
           <button onclick="changeFontSize('increase')">A+</button>
         </div>
       </div>
-      <button class="reset-button" onclick="saveBookmark()">Lưu dấu trang tại đây</button>
+
+      <button class="reset-button" onclick="saveBookmark()">📍 Lưu dấu trang</button>
     </div>
   </div>
-
 </article>
 
 <style>
-  /* 1. CSS THANH ĐIỀU HƯỚNG TRÊN ĐẦU */
-  .chapter-nav-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid #ddd;
-    z-index: 1001;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  }
-  .nav-container {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-  }
-  .nav-btn {
-    text-decoration: none;
-    color: #0366d6;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 5px 10px;
-    border: 1px solid #eee;
-    border-radius: 5px;
-  }
-  .nav-btn.disabled { color: #ccc; cursor: not-allowed; }
-  .nav-title { font-size: 13px; color: #666; font-style: italic; }
-
-  /* 2. CSS NỘI DUNG SÁCH & DẤU TRANG */
-  .book-body {
-    text-align: justify;
-    line-height: 1.8;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative;
-  }
-  .bookmark-indicator {
-    position: absolute;
-    left: -20px;
-    color: red;
-    font-size: 20px;
+  /* BIẾN MÀU SẮC (CSS VARIABLES) */
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --control-bg: #ffffff;
+    --border-color: #dddddd;
   }
 
-  /* 3. CSS NÚT QUAY LẠI ĐẦU TRANG */
-  .floating-btn {
-    position: fixed;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: white;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    cursor: pointer;
-    z-index: 1000;
-    display: none; /* Ẩn mặc định, hiện khi scroll */
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+  [data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --nav-bg: rgba(26, 26, 26, 0.95);
+    --control-bg: #2d2d2d;
+    --border-color: #444444;
   }
-  .scroll-top { bottom: 30px; right: 20px; }
 
-  /* Giữ nguyên CSS cũ của Widget bên trái từ bản trước... */
+  /* ÁP DỤNG MÀU SẮC */
+  body { background-color: var(--bg-color) !important; color: var(--text-color) !important; transition: 0.3s; }
+  .chapter-nav-top { background: var(--nav-bg) !important; border-bottom: 1px solid var(--border-color) !important; position: fixed; top:0; left:0; width:100%; z-index:1001; padding:10px 0; }
+  .settings-menu, .settings-toggle, .floating-btn, .theme-btn { background-color: var(--control-bg) !important; color: var(--text-color) !important; border-color: var(--border-color) !important; }
+  .book-body { text-align: justify; line-height: 1.8; max-width: 700px; margin: 0 auto; padding: 20px; color: var(--text-color); }
+  
+  /* CSS CHO NÚT CHUYỂN THEME */
+  .theme-switch-wrapper { display: flex; gap: 5px; }
+  .theme-btn { flex: 1; padding: 8px; cursor: pointer; border: 1px solid var(--border-color); border-radius: 5px; font-size: 12px; transition: 0.2s; }
+  .theme-btn.active { background-color: #0366d6 !important; color: white !important; border-color: #0366d6 !important; }
+
+  /* CSS CŨ ĐÃ ĐƯỢC TỐI ƯU */
   .fixed-reader-controls { position: fixed; bottom: 30px; left: 20px; z-index: 1000; }
-  .settings-toggle { background: white; border: 1px solid #ddd; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-  .settings-menu { display: none; position: absolute; bottom: 60px; left: 0; background: white; width: 180px; padding: 15px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+  .settings-toggle { width: 45px; height: 45px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid; }
+  .settings-menu { display: none; position: absolute; bottom: 60px; left: 0; width: 180px; padding: 15px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border: 1px solid; }
   .fixed-reader-controls.open .settings-menu { display: block; }
-  .button-group { display: flex; gap: 10px; align-items: center; margin-top: 5px; }
-  .reset-button { width: 100%; margin-top: 10px; cursor: pointer; background: #f0f0f0; border: 1px solid #ddd; padding: 5px; font-size: 12px; }
+  .nav-container { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
+  .nav-btn { text-decoration: none; color: #0366d6; font-size: 14px; font-weight: bold; }
+  .floating-btn { position: fixed; width: 45px; height: 45px; border-radius: 50%; z-index: 1000; display: none; align-items: center; justify-content: center; font-size: 20px; border: 1px solid; }
+  .scroll-top { bottom: 30px; right: 20px; }
+  .menu-header { font-weight: bold; border-bottom: 1px solid var(--border-color); margin-bottom: 10px; padding-bottom: 5px; }
+  .menu-section { margin-bottom: 15px; }
+  .label { display: block; font-size: 12px; margin-bottom: 5px; opacity: 0.8; }
+  .button-group { display: flex; align-items: center; gap: 10px; }
+  .reset-button { width: 100%; cursor: pointer; border: 1px solid; padding: 8px; border-radius: 5px; font-size: 12px; }
 </style>
 
 <script>
-  // A. LOGIC HIỆN NÚT BACK TO TOP
-  window.onscroll = function() {
-    const btn = document.getElementById("backToTop");
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      btn.style.display = "flex";
-    } else {
-      btn.style.display = "none";
-    }
-  };
-
-  // A. LOGIC LƯU DẤU TRANG (ĐÃ SỬA ĐỂ KHÔNG TRÙNG)
-  // Sử dụng URL của trang hiện tại làm ID duy nhất để không bị lẫn giữa các chương
-  const pageId = window.location.pathname; 
-
-  function saveBookmark() {
-    const scrollPos = window.scrollY;
-    // Lưu vị trí với chìa khóa là đường dẫn riêng của từng chương
-    localStorage.setItem('bookmark_pos_' + pageId, scrollPos);
+  // 1. LOGIC CHUYỂN THEME (SÁNG/TỐI)
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
     
-    // Hiển thị thông báo nhỏ thay vì dùng alert gây gián đoạn
-    const msg = document.createElement('div');
-    msg.innerHTML = "📍 Đã lưu dấu trang!";
-    msg.style = "position:fixed; bottom:100px; left:20px; background:rgba(0,0,0,0.7); color:white; padding:10px; border-radius:5px; z-index:2000;";
-    document.body.appendChild(msg);
-    setTimeout(() => msg.remove(), 2000);
+    // Cập nhật trạng thái nút
+    document.getElementById('btn-light').classList.toggle('active', theme === 'light');
+    document.getElementById('btn-dark').classList.toggle('active', theme === 'dark');
+  }
+
+  // 2. LOGIC LƯU DẤU TRANG
+  const pageId = window.location.pathname;
+  function saveBookmark() {
+    localStorage.setItem('bookmark_pos_' + pageId, window.scrollY);
+    alert("📍 Đã lưu vị trí đọc!");
   }
 
   // Tự động lưu vị trí sau khi người dùng ngừng cuộn 2 giây
@@ -180,31 +134,7 @@ layout: default
     }, 2000);
   }, false);
 
-  // B. TỰ ĐỘNG CUỘN KHI VÀO LẠI CHƯƠNG
-  window.addEventListener('load', () => {
-    const savedPos = localStorage.getItem('bookmark_pos_' + pageId);
-    if (savedPos) {
-      // Chỉ tự động cuộn nếu vị trí lưu lớn hơn 100px (tránh cuộn lên đầu thừa thãi)
-      if (parseInt(savedPos) > 100) {
-        setTimeout(() => {
-          window.scrollTo({
-            top: parseInt(savedPos),
-            behavior: 'smooth'
-          });
-        }, 800); // Tăng độ trễ một chút để đảm bảo nội dung đã render xong
-      }
-    }
-    
-    // (Giữ nguyên phần áp dụng cỡ chữ vì cỡ chữ nên dùng chung cho cả bộ sách)
-    const savedSize = localStorage.getItem('preferredFontSize');
-    if (savedSize) {
-      document.getElementById('book-content').style.fontSize = savedSize + "%";
-      document.getElementById('current-size-display').innerText = savedSize + "%";
-    }
-  });
-
-  // C. LOGIC WIDGET CỠ CHỮ
-  function toggleReaderSettings() { document.getElementById('readerControls').classList.toggle('open'); }
+  // 3. LOGIC CỠ CHỮ
   function changeFontSize(action) {
     let content = document.getElementById('book-content');
     let display = document.getElementById('current-size-display');
@@ -216,4 +146,32 @@ layout: default
     display.innerText = currentZoom + "%";
     localStorage.setItem('preferredFontSize', currentZoom);
   }
+
+  function toggleReaderSettings() { document.getElementById('readerControls').classList.toggle('open'); }
+
+  // 4. KHI TRANG LOAD XONG
+  window.addEventListener('load', () => {
+    // Load Theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+
+    // Load Vị trí cuộn
+    const savedPos = localStorage.getItem('bookmark_pos_' + pageId);
+    if (savedPos && parseInt(savedPos) > 100) {
+      setTimeout(() => window.scrollTo({ top: parseInt(savedPos), behavior: 'smooth' }), 500);
+    }
+
+    // Load Cỡ chữ
+    const savedSize = localStorage.getItem('preferredFontSize');
+    if (savedSize) {
+      document.getElementById('book-content').style.fontSize = savedSize + "%";
+      document.getElementById('current-size-display').innerText = savedSize + "%";
+    }
+
+    // Nút Back to Top
+    window.onscroll = function() {
+      const btn = document.getElementById("backToTop");
+      btn.style.display = (window.scrollY > 300) ? "flex" : "none";
+    };
+  });
 </script>

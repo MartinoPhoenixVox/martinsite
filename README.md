@@ -1,4 +1,7 @@
-# Giới thiệu
+---
+layout: default
+title: Giới thiệu
+---
 
 > "Cả trái đất, hãy tung hô Thiên Chúa, đàn hát lên mừng Danh Thánh rạng ngời, nào dâng lời ca tụng tôn vinh !" (Thánh vịnh 66,1-2)
 
@@ -17,14 +20,14 @@ Dự án này được truyền cảm hứng và có một số chi tiết học
 
 ## 🛠️ Công nghệ
 
-- Frontend: HTML, CSS, Javascript
-- Backend: JavaScript
-- Data: SQlite3
+- Frontend: HTML, CSS, Javascript, YAML
+- Backend: JavaScript, Jekyll
+- Data: Markdown files
 - Hosting: GitHub Pages
 
 ## 🌟 Tính năng
 
-- [ ] Lưu trữ tài liệu (phía Admin)
+- [x] Lưu trữ tài liệu (phía Admin)
 - [ ] Giới thiệu bản thân (phía Admin)
 - [ ] Xem tài liệu (phía người dùng)
 - [ ] In tài liệu (phía người dùng)
