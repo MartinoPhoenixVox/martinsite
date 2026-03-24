@@ -3,7 +3,7 @@ title: "THÁNH THIỆN chứ không TRẦN TỤC"
 author: "ĐỨC GIÁO HOÀNG PHANXICÔ"
 translator: "Lm. Đa Minh Nguyễn Đức Thông, CSsR"
 tags: [đức giáo hoàng, đức thánh cha, thánh thiện, trần tục]
-topics: [Sách Thiêng Liêng]
+category: "Sách Thiêng Liêng"
 ---
 
 ĐỨC GIÁO HOÀNG PHANXICÔ
