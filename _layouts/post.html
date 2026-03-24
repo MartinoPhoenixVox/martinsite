@@ -2,132 +2,178 @@
 layout: default
 ---
 <article class="post">
-  <header class="post-header" style="margin-bottom: 30px; text-align: center;">
-    <h1 class="post-title" style="font-size: 2.5em; font-weight: 700; color: #333; letter-spacing: -0.5px;">{{ page.title }}</h1>
+  <header class="post-header" style="text-align: center; margin-bottom: 40px;">
+    <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
-  <div class="reader-controls" style="
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin: 30px 0;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border: 1px solid #e1e4e8;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  ">
-    <span style="font-size: 14px; font-weight: 600; color: #555;">KÍCH CỠ CHỮ:</span>
-    
-    <button onclick="changeFontSize('decrease')" style="
-      background-color: white;
-      border: 1px solid #d1d5da;
-      border-radius: 6px;
-      color: #333;
-      cursor: pointer;
-      font-size: 16px;
-      padding: 8px 16px;
-      transition: all 0.2s;
-      outline: none;
-    " onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor='white'">
-      A-
-    </button>
-    
-    <span id="current-size" style="
-      font-size: 16px;
-      font-weight: 700;
-      color: #333;
-      min-width: 55px;
-      text-align: center;
-    ">
-      100%
-    </span>
-    
-    <button onclick="changeFontSize('increase')" style="
-      background-color: white;
-      border: 1px solid #d1d5da;
-      border-radius: 6px;
-      color: #333;
-      cursor: pointer;
-      font-size: 16px;
-      padding: 8px 16px;
-      transition: all 0.2s;
-      outline: none;
-    " onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor='white'">
-      A+
-    </button>
-    
-    <button onclick="changeFontSize('reset')" style="
-      background: none;
-      border: none;
-      color: #0366d6;
-      cursor: pointer;
-      font-size: 14px;
-      text-decoration: none;
-      padding: 5px;
-    " onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
-      Đặt lại
-    </button>
+  <div class="fixed-reader-controls" id="readerControls">
+    <button class="settings-toggle" onclick="toggleReaderSettings()">
+      <span class="icon">&#9881;</span> </button>
+
+    <div class="settings-menu" id="settingsMenu">
+      <div class="menu-header">Tùy Chỉnh Đọc</div>
+      
+      <div class="menu-section">
+        <span class="label">Cỡ Chữ:</span>
+        <div class="button-group">
+          <button onclick="changeFontSize('decrease')">A-</button>
+          <span id="current-size-display">100%</span>
+          <button onclick="changeFontSize('increase')">A+</button>
+        </div>
+      </div>
+
+      <div class="menu-section">
+        <button class="reset-button" onclick="changeFontSize('reset')">Đặt lại mặc định</button>
+      </div>
+    </div>
   </div>
 
-  <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+  <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
 
-  <div id="book-content" class="post-content book-text" style="
-    text-align: justify;           /* 👈 ĐÂY LÀ DÒNG CĂN THẲNG ĐỀU HAI BÊN */
-    text-justify: inter-word;      /* Tối ưu khoảng cách giữa các từ khi căn justify */
-    line-height: 1.8;              /* Tăng khoảng cách dòng để đọc dễ hơn */
+  <div id="book-content" style="
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.8;
     color: #333;
-    font-size: 18px;               /* Cỡ chữ mặc định cho sách (khoảng 100%) */
-    transition: font-size 0.2s ease; /* Hiệu ứng mượt mà khi đổi cỡ chữ */
-    max-width: 700px;              /* Giới hạn chiều rộng để dòng không quá dài, dễ mỏi mắt */
-    margin: 0 auto;                /* Căn giữa nội dung sách */
+    font-size: 18px;
+    transition: font-size 0.2s ease;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 15px;
   ">
     {{ content }}
   </div>
 
-  <style>
-    /* Tối ưu hiển thị trên màn hình nhỏ */
-    @media (max-width: 600px) {
-      #book-content {
-        text-align: left; /* Trên điện thoại rất nhỏ, justify có thể làm khoảng cách từ quá xấu */
-        font-size: 16px !important; /* Cỡ chữ mặc định nhỏ hơn chút trên di động */
-        padding: 0 15px;
-      }
-      .reader-controls {
-        flex-wrap: wrap; /* Các nút bấm có thể xuống dòng trên điện thoại quá nhỏ */
-        gap: 10px;
-      }
-    }
-  </style>
-
 </article>
 
-<script>
-  let currentZoom = 100; // Tương ứng với 100% của 18px
-  const contentDiv = document.getElementById('book-content');
-  const sizeDisplay = document.getElementById('current-size');
+<style>
+  /* Container chính dính góc */
+  .fixed-reader-controls {
+    position: fixed;
+    bottom: 30px; /* Cách đáy 30px */
+    left: 20px;   /* Cách lề trái 20px */
+    z-index: 1000; /* Luôn nằm trên cùng */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
 
+  /* Nút bánh răng toggle */
+  .settings-toggle {
+    background-color: white;
+    border: 1px solid #ddd;
+    color: #555;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  .settings-toggle:hover {
+    background-color: #f0f0f0;
+    transform: rotate(45deg); /* Hiệu ứng xoay khi hover */
+  }
+
+  /* Menu cài đặt (ẩn mặc định) */
+  .settings-menu {
+    display: none; /* Mặc định ẩn */
+    position: absolute;
+    bottom: 65px; /* Nằm trên nút bánh răng */
+    left: 0;
+    background-color: white;
+    width: 200px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+  
+  /* Hiện menu khi có class .open */
+  .fixed-reader-controls.open .settings-menu {
+    display: block;
+  }
+
+  /* Chi tiết menu */
+  .menu-header {
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  .menu-section { margin-bottom: 15px; }
+  .label { font-size: 13px; color: #666; font-weight: 600; display: block; margin-bottom: 5px; }
+  
+  /* Nhóm nút chỉnh cỡ */
+  .button-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 5px;
+  }
+  .button-group button {
+    background-color: white;
+    border: 1px solid #d1d5da;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    padding: 5px 12px;
+    font-size: 14px;
+  }
+  #current-size-display { font-weight: bold; font-size: 14px; color: #333; min-width: 45px; text-align: center; }
+  
+  /* Nút reset */
+  .reset-button {
+    width: 100%;
+    background: none;
+    border: 1px solid #0366d6;
+    color: #0366d6;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+</style>
+
+<script>
+  let currentZoom = 100; // 100%
+  const contentDiv = document.getElementById('book-content');
+  const sizeDisplay = document.getElementById('current-size-display');
+  const controlsDiv = document.getElementById('readerControls');
+
+  // Toggle ẩn hiện menu
+  function toggleReaderSettings() {
+    controlsDiv.classList.toggle('open');
+  }
+
+  // Đóng menu khi bấm ra ngoài
+  document.addEventListener('click', function(event) {
+    if (!controlsDiv.contains(event.target)) {
+      controlsDiv.classList.remove('open');
+    }
+  });
+
+  // Xử lý đổi cỡ chữ
   function updateDisplay() {
     contentDiv.style.fontSize = currentZoom + "%";
     sizeDisplay.innerText = currentZoom + "%";
-    // Lưu lựa chọn vào trình duyệt
     localStorage.setItem('preferredFontSize', currentZoom);
   }
 
   function changeFontSize(action) {
-    if (action === 'increase' && currentZoom < 250) {
-      currentZoom += 10;
-    } else if (action === 'decrease' && currentZoom > 50) {
-      currentZoom -= 10;
-    } else if (action === 'reset') {
-      currentZoom = 100;
-    }
+    if (action === 'increase' && currentZoom < 250) currentZoom += 10;
+    else if (action === 'decrease' && currentZoom > 50) currentZoom -= 10;
+    else if (action === 'reset') currentZoom = 100;
     updateDisplay();
   }
 
-  // Tự động áp dụng cỡ chữ đã lưu khi tải trang mới
+  // Tự động áp dụng khi load trang
   window.addEventListener('DOMContentLoaded', (event) => {
     const savedSize = localStorage.getItem('preferredFontSize');
     if (savedSize) {
