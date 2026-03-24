@@ -12,7 +12,7 @@ title: Trang chủ Thư viện
   <ul>
     {% for item in group.items %}
       <li>
-        <a href="{{ item.url }}">{{ item.title }}</a>
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       </li>
     {% endfor  %}
   </ul>
