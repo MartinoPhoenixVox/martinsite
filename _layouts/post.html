@@ -154,26 +154,48 @@ layout: default
     }
   };
 
-  // B. LOGIC LƯU DẤU TRANG (BOOKMARK)
-  const bookId = "{{ page.book_id }}";
-  
+  // A. LOGIC LƯU DẤU TRANG (ĐÃ SỬA ĐỂ KHÔNG TRÙNG)
+  // Sử dụng URL của trang hiện tại làm ID duy nhất để không bị lẫn giữa các chương
+  const pageId = window.location.pathname; 
+
   function saveBookmark() {
     const scrollPos = window.scrollY;
-    localStorage.setItem('bookmark_' + bookId, scrollPos);
-    alert("Đã lưu vị trí đọc!");
+    // Lưu vị trí với chìa khóa là đường dẫn riêng của từng chương
+    localStorage.setItem('bookmark_pos_' + pageId, scrollPos);
+    
+    // Hiển thị thông báo nhỏ thay vì dùng alert gây gián đoạn
+    const msg = document.createElement('div');
+    msg.innerHTML = "📍 Đã lưu dấu trang!";
+    msg.style = "position:fixed; bottom:100px; left:20px; background:rgba(0,0,0,0.7); color:white; padding:10px; border-radius:5px; z-index:2000;";
+    document.body.appendChild(msg);
+    setTimeout(() => msg.remove(), 2000);
   }
 
-  // Tự động cuộn đến vị trí cũ khi vào lại chương
+  // Tự động lưu vị trí sau khi người dùng ngừng cuộn 2 giây
+  let isScrolling;
+  window.addEventListener('scroll', function (event) {
+    window.clearTimeout(isScrolling);
+    isScrolling = setTimeout(function() {
+      localStorage.setItem('bookmark_pos_' + pageId, window.scrollY);
+    }, 2000);
+  }, false);
+
+  // B. TỰ ĐỘNG CUỘN KHI VÀO LẠI CHƯƠNG
   window.addEventListener('load', () => {
-    const savedPos = localStorage.getItem('bookmark_' + bookId);
+    const savedPos = localStorage.getItem('bookmark_pos_' + pageId);
     if (savedPos) {
-      // Đợi một chút để trang load xong rồi cuộn
-      setTimeout(() => {
-        window.scrollTo({ top: parseInt(savedPos), behavior: 'smooth' });
-      }, 500);
+      // Chỉ tự động cuộn nếu vị trí lưu lớn hơn 100px (tránh cuộn lên đầu thừa thãi)
+      if (parseInt(savedPos) > 100) {
+        setTimeout(() => {
+          window.scrollTo({
+            top: parseInt(savedPos),
+            behavior: 'smooth'
+          });
+        }, 800); // Tăng độ trễ một chút để đảm bảo nội dung đã render xong
+      }
     }
     
-    // Áp dụng cỡ chữ cũ
+    // (Giữ nguyên phần áp dụng cỡ chữ vì cỡ chữ nên dùng chung cho cả bộ sách)
     const savedSize = localStorage.getItem('preferredFontSize');
     if (savedSize) {
       document.getElementById('book-content').style.fontSize = savedSize + "%";
