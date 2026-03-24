@@ -1,6 +1,11 @@
-# Thư viện sách của tôi
+---
+layout: default
+title: Trang chủ Thư viện
+---
 
-{% assign books_by_category = site.books | group_by: "category" %}
+# Danh sách sách theo danh mục
+
+{% assign books_by_category = site.sach | group_by: "category" %}
 
 {% for group in books_by_category %}
   ## {{ group.name | default: "Chưa phân loại" }}

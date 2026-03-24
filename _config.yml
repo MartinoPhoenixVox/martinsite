@@ -14,15 +14,3 @@ defaults:
       type: "books"
     values:
       layout: "post"
-
-collections:
-  document:
-    output: true
-    permalink: /document/:path/
-
-defaults:
-  - scope:
-      path: ""
-      type: "document"
-    values:
-      layout: "post"
