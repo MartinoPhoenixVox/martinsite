@@ -1,50 +1,42 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
+<article class="post">
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
-  <div class="font-resizer" style="margin: 20px 0; padding: 10px; background: #f0f0f0; border-radius: 8px; display: flex; align-items: center; gap: 15px; font-family: sans-serif;">
-    <span style="font-weight: bold; font-size: 14px;">Cỡ chữ:</span>
-    <button onclick="changeFontSize('decrease')" style="cursor:pointer; padding: 5px 12px; border: 1px solid #ccc; background: white; border-radius: 4px;">A-</button>
-    <span id="current-size" style="font-weight: bold; min-width: 45px; text-align: center;">100%</span>
-    <button onclick="changeFontSize('increase')" style="cursor:pointer; padding: 5px 12px; border: 1px solid #ccc; background: white; border-radius: 4px;">A+</button>
-    <button onclick="changeFontSize('reset')" style="cursor:pointer; padding: 5px 12px; border: none; background: none; color: #666; text-decoration: underline; font-size: 13px;">Đặt lại</button>
+  <div style="color: red; font-weight: bold; border: 2px solid red; padding: 10px; margin-bottom: 20px;">
+    Hệ thống điều khiển cỡ chữ đang tải...
   </div>
 
-  <div id="book-content" class="post-content e-content" itemprop="articleBody" style="line-height: 1.6;">
+  <div class="font-resizer" style="margin: 20px 0; padding: 15px; background: #FFEB3B; border: 2px solid #000; display: block !important; position: relative; z-index: 9999;">
+    <b style="color: black;">Tùy chỉnh đọc sách: </b>
+    <button onclick="changeFontSize('decrease')" style="padding: 10px 20px; cursor: pointer;">A- (Nhỏ)</button>
+    <span id="current-size" style="margin: 0 15px; font-weight: bold; color: black;">100%</span>
+    <button onclick="changeFontSize('increase')" style="padding: 10px 20px; cursor: pointer;">A+ (To)</button>
+  </div>
+
+  <hr>
+
+  <div id="book-content" style="line-height: 1.8; transition: font-size 0.2s ease;">
     {{ content }}
   </div>
-
 </article>
 
 <script>
-  let currentZoom = 100;
-  const contentDiv = document.getElementById('book-content');
-  const sizeDisplay = document.getElementById('current-size');
+  function changeFontSize(action) {
+    const contentDiv = document.getElementById('book-content');
+    const sizeDisplay = document.getElementById('current-size');
+    let currentZoom = parseInt(sizeDisplay.innerText);
 
-  function updateDisplay() {
+    if (action === 'increase') currentZoom += 10;
+    else if (action === 'decrease') currentZoom -= 10;
+
+    if (currentZoom < 50) currentZoom = 50;
+    if (currentZoom > 250) currentZoom = 250;
+
     contentDiv.style.fontSize = currentZoom + "%";
     sizeDisplay.innerText = currentZoom + "%";
-    localStorage.setItem('preferredFontSize', currentZoom);
   }
-
-  function changeFontSize(action) {
-    if (action === 'increase' && currentZoom < 200) currentZoom += 10;
-    else if (action === 'decrease' && currentZoom > 50) currentZoom -= 10;
-    else if (action === 'reset') currentZoom = 100;
-    updateDisplay();
-  }
-
-  // Tự động áp dụng khi load trang
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const savedSize = localStorage.getItem('preferredFontSize');
-    if (savedSize) {
-      currentZoom = parseInt(savedSize);
-      updateDisplay();
-    }
-  });
 </script>
