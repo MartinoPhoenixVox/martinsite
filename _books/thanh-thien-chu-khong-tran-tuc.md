@@ -17,14 +17,13 @@ THÁNH THIỆN chứ không TRẦN TỤC
 
 ## Danh sách các chương
 {% assign all_items = site.books | where: "book_id", page.book_id %}
+{% assign chapters = all_items | where: "is_chapter", true | sort: "order" %}
 
 <ul>
-  {% for item in all_items %}
-    {% if item.is_chapter == true %}
-      <li>
-        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-      </li>
-    {% endif %}
+  {% for chapter in chapters %}
+    <li>
+      <a href="{{ chapter.url | relative_url }}">{{ chapter.title }}</a>
+    </li>
   {% endfor %}
 </ul>
 
