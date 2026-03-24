@@ -5,15 +5,13 @@ title: Trang chủ Thư viện
 
 # Danh sách sách theo danh mục
 
-{% assign books_by_category = site.books | group_by: "category" %}
+{% assign all_books = site.books | where_exp: "item", "item.is_chapter != true" | group_by: "category" %}
 
-{% for group in books_by_category %}
-  ## {{ group.name | default: "Chưa phân loại" }}
+{% for group in all_books %}
+  ## {{ group.name }}
   <ul>
-    {% for item in group.items %}
-      <li>
-        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-      </li>
-    {% endfor  %}
+    {% for book in group.items %}
+      <li><a href="{{ book.url | relative_url }}">{{ book.title }}</a></li>
+    {% endfor %}
   </ul>
 {% endfor %}
