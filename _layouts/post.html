@@ -4,30 +4,37 @@ layout: default
 <article class="post">
   
   <div class="chapter-nav-top">
-    {% assign all_items = site.sach | where: "book_id", page.book_id | where: "is_chapter", true | sort: "order" %}
-    {% for item in all_items %}
-      {% if item.url == page.url %}
-        {% assign current_index = forloop.index0 %}
-        {% assign prev_index = current_index | minus: 1 %}
-        {% assign next_index = current_index | plus: 1 %}
-        
-        <div class="nav-container">
-          {% if prev_index >= 0 %}
-            <a href="{{ all_items[prev_index].url | relative_url }}" class="nav-btn">« Chương trước</a>
-          {% else %}
-            <span class="nav-btn disabled">« Đầu sách</span>
-          {% endif %}
+    {% comment %} 
+      LẤY TẤT CẢ FILE CÙNG BOOK_ID, LỌC RA NHỮNG FILE CÓ ORDER RỒI MỚI SORT 
+    {% endcomment %}
+    {% assign all_in_book = site.books | where: "book_id", page.book_id %}
+    {% assign all_items = all_in_book | where_exp: "item", "item.order != nil" | sort: "order" %}
+    
+    {% if all_items.size > 1 %}
+      {% for item in all_items %}
+        {% if item.url == page.url %}
+          {% assign current_index = forloop.index0 %}
+          {% assign prev_index = current_index | minus: 1 %}
+          {% assign next_index = current_index | plus: 1 %}
+          
+          <div class="nav-container">
+            {% if prev_index >= 0 %}
+              <a href="{{ all_items[prev_index].url | relative_url }}" class="nav-btn">« Trước</a>
+            {% else %}
+              <span class="nav-btn disabled">« Đầu</span>
+            {% endif %}
 
-          <span class="nav-title">{{ page.title | truncate: 20 }}</span>
+            <span class="nav-title">{{ page.title | truncate: 15 }}</span>
 
-          {% if next_index < all_items.size %}
-            <a href="{{ all_items[next_index].url | relative_url }}" class="nav-btn">Chương sau »</a>
-          {% else %}
-            <span class="nav-btn disabled">Hết sách »</span>
-          {% endif %}
-        </div>
-      {% endif %}
-    {% endfor %}
+            {% if next_index < all_items.size %}
+              <a href="{{ all_items[next_index].url | relative_url }}" class="nav-btn">Sau »</a>
+            {% else %}
+              <span class="nav-btn disabled">Hết »</span>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
   </div>
 
   <header class="post-header" style="text-align: center; margin-top: 80px; margin-bottom: 40px;">
