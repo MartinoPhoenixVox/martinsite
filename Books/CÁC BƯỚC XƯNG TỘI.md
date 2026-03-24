@@ -6,9 +6,11 @@ category: "Tài liệu khác"
 tags: [xưng tội, bí tích, bí tích hòa giải]
 ---
 
-**Tổng Giáo Phận Sài Gòn**
-**Giáo Xứ Thánh Đa Minh - Ba Chuông**
-**Xứ Đoàn Đức Maria - Mẹ Thiên Chúa**
+Tổng Giáo Phận Sài Gòn
+
+Giáo Xứ Thánh Đa Minh - Ba Chuông
+
+Xứ Đoàn Đức Maria - Mẹ Thiên Chúa
 
 ## Trước khi Xưng tội
 
