@@ -1,7 +1,6 @@
 title: Martinsite
 description: Nơi lưu trữ và phân tích dữ liệu các tác phẩm.
 theme: minima
-markdown: kramdown
 
 collections:
   books:
@@ -14,3 +13,5 @@ defaults:
       type: "books"
     values:
       layout: "post"
+
+markdown: kramdown
