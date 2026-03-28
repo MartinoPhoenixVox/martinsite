@@ -1,4 +1,8 @@
-# Phân tích - Thiết kế
+---
+layout: default
+title: Phân tích - Thiết kế
+permalink: /thisproject/
+---
 
 Đây là tài liệu về phân tích và thiết kế hệ thống [martinsite](https://github.com/MartinoPhoenixVox/martinsite).
 
