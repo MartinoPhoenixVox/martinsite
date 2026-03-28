@@ -13,33 +13,6 @@
         /* Thêm CSS hỗ trợ Dark Mode cho layout đọc sách */
         [data-theme="dark"] body { background-color: #1a1a1a !important; color: #e0e0e0 !important; }
         [data-theme="dark"] .top-bar, [data-theme="dark"] footer { background-color: #111 !important; }
-        /* 1. Loại bỏ mọi khoảng trống mặc định của trình duyệt */
-        html, body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        /* 2. Ép Header và Top-bar không được có margin dưới */
-        .top-bar, header, .navbar {
-            margin-bottom: 0 !important;
-            padding-bottom: 0 !important;
-            border-bottom: none !important;
-        }
-
-        /* 3. Khử vạch trắng giữa header và main */
-        main {
-            display: block;
-            margin-top: 0 !important;
-            padding-top: 0 !important;
-            background-color: var(--bg-color, #ffffff); /* Đảm bảo nền main trùng màu trang */
-        }
-
-        /* 4. Fix cho Novelty Theme: Khử border ẩn của navbar */
-        .header-bottom, .menu-area {
-            border: none !important;
-            box-shadow: none !important;
-        }
     </style>
     {% endif %}
 </head>
@@ -50,8 +23,7 @@
                 <div class="col-xl-4 top-left d-xl-block d-none"><p>Hotline: <span>+1 285 225</span></p></div>
                 <div class="col-xl-4 top-center"><p>Chào mừng bạn đến với Thư viện Martin!</p></div>
                 <div class="col-xl-4 top-right d-xl-block d-none">
-                    <ul><li><a href="{{ '/' | relative_url }}">Trang chủ</a></li></ul>
-                    <ul><li><a href="{{ '/README.md' | relative_url }}">Giới thiệu</a></li></ul>
+                    <ul><li><a href="{{ '/' | relative_url }}">Trang chủ</a></li><li><a href="{{ '/README.md' | relative_url }}">Giới thiệu</a></li></ul>
                 </div>
             </div>
         </div>
@@ -66,7 +38,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-12 col-footer">
                     <h3 class="footer-title">Martinsite</h3>
-                    <div class="col-xl-4 top-right d-xl-block d-none"><p>Ad Majorem Dei Gloriam</p></div>
+                    <div class="top-right"><p>Ad Majorem Dei Gloriam</p></div>
                 </div>
                 </div>
         </div>
