@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: about
 title: Phân tích - Thiết kế
 permalink: /thisproject/
 ---
