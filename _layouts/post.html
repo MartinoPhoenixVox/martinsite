@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="chapter-nav-top" style="position: sticky; top: 0; background: var(--nav-bg); z-index: 1000; border-bottom: 1px solid #eee; padding: 10px 0;">
+<div class="chapter-nav-top" style="position: sticky; top: 0; background: var(--nav-bg); z-index: 1000; border-bottom: 1px solid #eee; padding: 10px 0; margin-top: -1px;">
     <div class="container d-flex justify-content-between align-items-center">
         {% assign all_in_book = site.books | where: "book_id", page.book_id | where_exp: "item", "item.order != nil" | sort: "order" %}
         {% for item in all_in_book %}{% if item.url == page.url %}

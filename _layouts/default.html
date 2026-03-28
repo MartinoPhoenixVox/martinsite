@@ -13,6 +13,19 @@
         /* Thêm CSS hỗ trợ Dark Mode cho layout đọc sách */
         [data-theme="dark"] body { background-color: #1a1a1a !important; color: #e0e0e0 !important; }
         [data-theme="dark"] .top-bar, [data-theme="dark"] footer { background-color: #111 !important; }
+        /* Xóa khoảng trống giữa Header và Nội dung */
+        main {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        .top-bar {
+            margin-bottom: 0 !important;
+        }
+        /* Nếu cậu có dùng Navbar bên dưới Top-bar, hãy thêm dòng này */
+        .navbar {
+            margin-bottom: 0 !important;
+            border: none !important;
+        }
     </style>
     {% endif %}
 </head>
@@ -21,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-4 top-left d-xl-block d-none"><p>Hotline: <span>+1 285 225</span></p></div>
-                <div class="col-xl-4 top-center"><p>Chào mừng bạn đến với Thư viện sách!</p></div>
+                <div class="col-xl-4 top-center"><p>Chào mừng bạn đến với Thư viện Martin!</p></div>
                 <div class="col-xl-4 top-right d-xl-block d-none">
                     <ul><li><a href="{{ '/' | relative_url }}">Trang chủ</a></li></ul>
                 </div>
@@ -37,8 +50,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-12 col-footer">
-                    <h3 class="footer-title">Về chúng tôi</h3>
-                    <p>Thư viện lưu trữ và phân tích dữ liệu sách Markdown.</p>
+                    <h3 class="footer-title">Martinsite</h3>
+                    <p>Ad Majorem Dei Gloriam</p>
                 </div>
                 </div>
         </div>

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Thư viện Novelty
+title: Thư viện Martin
 ---
 
 <div class="container mt-5">
-    <h2 class="text-center mb-5">Danh Mục Sách Hệ Thống</h2>
+    <h2 class="text-center mb-5">Danh Mục Sách</h2>
     
     {% assign books_by_cat = site.books | where_exp: "item", "item.is_chapter != true" | group_by: "category" %}
     
