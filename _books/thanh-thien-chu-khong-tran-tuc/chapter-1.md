@@ -151,7 +151,27 @@ Dân Israel là nô lệ tại Ai cập, nhưng họ đã quen với tình trạ
 
 ### Judith, Jonah và Êlia
 
-Sau này, các kỳ mục của Israel, mệt mỏi và sợ hãi, đã muốn thoả hiệp với kẻ thù, và Judith đã phải đến và đọc lại lịch sử cho họ nghe, để họ khỏi chấp nhận, như những con cừu bị đem đi làm thịt, những hoàn cảnh trái với ý Thiên Chúa[^36]. Jona thì muốn tránh rắc rối: ông được lệnh đi Ninive nhưng ông lại trẩy đi Tarshis[^37] và Thiên Chúa đã phải can thiệp bằng một thử thách có tính thanh luyện (một đêm thật trong
+Sau này, các kỳ mục của Israel, mệt mỏi và sợ hãi, đã muốn thoả hiệp với kẻ thù, và Judith đã phải đến và đọc lại lịch sử cho họ nghe, để họ khỏi chấp nhận, như những con cừu bị đem đi làm thịt, những hoàn cảnh trái với ý Thiên Chúa[^36]. Jona thì muốn tránh rắc rối: ông được lệnh đi Ninive nhưng ông lại trẩy đi Tarshis[^37] và Thiên Chúa đã phải can thiệp bằng một thử thách có tính thanh luyện (một đêm thật trong bụng cá và thứ đêm khác kéo dài từ giờ thứ chín ngày thứ Sáu tuần thánh đến bình minh của ngày thứ nhất trong tuần). Êlia tự nhủ, ông đã đi quá xa trong việc sát hại các tư tế của Baal, và ông phải khắc phục nỗi khiếp sợ một phụ nữ (việc này nhắc tôi nhớ đến Luật phân định số 12 trong tuần Linh thao thứ nhất) và ông đã phải chạy trốn và muốn chấm dứt cuộc đời[^38]. Ông không chịu nổi nỗi cô đơn trong sự chiến thắng của Thiên Chúa.
+
+### Kết quả của những đau khổ triền miên
+
+Nathanael cảm thấy thoải mái khi nói cách nghi ngờ rằng chẳng có gì tốt mà lại xuất phát từ Nazareth[^39] hơn là tin vào sự nhiệt thành của Philipphê. Hai môn đệ này, giống như hai Jona khác, đều đang muốn tránh rắc rối, họ được nói cho biết là phải đến Galilea và họ đã chạy theo đường khác đến Emmaus[^40], các Tông đồ còn lại, đều không muốn tin vào bằng chứng sờ sờ trước mắt trong phòng Tiệc ly, và tác giả Tin mừng nói rằng "họ vui quá đến độ không dám tin vào mắt mình" (Lc 24, 41). Đó chính là cốt lõi của vấn đề: quá trình chịu đựng bao giờ cũng làm cho người ta chán nản; kinh nghiệm về sự thất bại bao giờ cũng đẩy tâm hồn con người tới chỗ trở thành quen với nó, đến độ họ sẽ không còn kinh ngạc hay chịu đựng thêm nữa khi một đau khổ khác ập đến. Hay cách đơn giản, họ đang bằng lòng với tình trạng của họ và không muốn bị rắc rối thêm nữa.
+
+### Một sự miễn cưỡng đối với Thiên Chúa
+
+Và trong tất cả các qui chiếu Kinh thánh, ta thấy rõ sự miễn cưỡng đó. Tâm hồn không muốn bất cứ sự rắc rối nào. Họ sợ rằng Thiên Chúa sẽ đi vào và đẩy họ vào trong con đường ngoài tầm kiểm soát của mình. Họ sợ sự thăm viếng của Thiên Chúa, sợ sự an ủi của Ngài. Điều này tạo nên một thứ chủ nghĩa định mệnh: tâm hồn họ trở nên hẹp hòi hơn, phù hợp với sự cô đơn hay tính thụ động của họ. Họ sợ hoài bão và thích một cái gì đó có thật dù ít hơn là lời hứa về một cái gì đó nhiều hơn mà quên rằng cái thật của Thiên Chúa được diễn tả trong lời hứa: "Hãy rời bỏ quê hương, gia đình và nhà cha ngươi đến nơi ta sẽ chỉ cho ngươi, ta sẽ làm cho người thành một nước lớn; ta sẽ chúc phúc cho ngươi và làm cho tên tuổi ngươi lẫy lừng đến độ người ta sẽ lấy tên ngươi mà chúc phúc cho nhau" (St 12, 1-2).
+
+### Tình trạng suy đồi tinh vi
+
+Trong chủ nghĩa hiện thực của việc thích cái ít hơn, tiến trình của tình trạng suy đồi đang hoạt động rồi: Trong chủ nghĩa hiện thực của việc thích cái ít hơn, người ta chìm vào sự tầm thường và hâm hâm (hai hình thức của tình trạng suy đồi thiêng liêng) và chìm vào việc mặc cả với Thiên Chúa theo cách thức thứ nhất và thứ nhì của "các thuyết nhị nguyên" hay các hạng người ta đã ám chỉ tới ở trên (tr. 26 và note 21 - 23 bản tiếng Anh). Trong lời nguyện sám hối, trong bí tích hoà giải, họ xin Thiên Chúa tha thứ cho các tội khác; nhưng họ lại không lột trần tình trạng vỡ mộng này của linh hồn mình trước Chúa. Đây là tình trạng xơ cứng chậm nhưng tai hại của tâm hồn.
+
+### “Chủ nghĩa tiêu thụ tôn giáo"
+
+Rồi tâm hồn bắt đầu thoả mãn cơn đói bằng các sản phẩm người ta đưa ra ở siêu thị của chủ nghĩa tiêu thụ tôn giáo. Hơn bao giờ hết, những người ấy đang sống đời sống thánh hiến như việc thực thi các nhân cách của họ cách tự lập.
+
+### Tình trạng suy đồi làm cho tâm hồn họ khép lại với sự siêu việt
+
+Nhiều người trong họ sẽ tìm sự tự lập này trong sự hài lòng về việc làm, những người khác trong sự thành công của việc làm, những người khác trong niềm vui họ có vì được đánh giá cao; những người khác nữa lại tìm cách hoàn thiện các phương pháp hiện đại, để khỏa lấp nỗi trống vắng tâm hồn họ đang trải qua liên quan tới cùng đích họ đã một lần tìm kiếm và cho phép mình được tìm kiếm. Những người khác sẽ lấp đầy khoảng trống bằng cách sống cuộc sống xã hội cách mãnh liệt; họ thích ra ngoài, thích đi nghỉ với bạn bè, tham dự các bữa ăn và các buổi tiếp tân; họ cố sao để được người ta ngưỡng mộ trong mọi sự trên trần gian. Tôi có thể tiếp tục liệt kê các trường hợp về tình trạng suy đồi; nhưng để đơn giản hoá, tất cả những trường hợp ấy chỉ là một phần của một cái gì sâu xa hơn; "sự trần tục thiêng liêng" đã được ám chỉ ở trên[^41]. Sự trần tục thiêng
 
 [^01]: O. Frigerio, 'Corruption, un problema politico' "La Nacion", year 122, no, 42, 863, Monday 4<sup>th</sup> March 1991, tr. 7.
 
@@ -225,3 +245,11 @@ Sau này, các kỳ mục của Israel, mệt mỏi và sợ hãi, đã muốn t
 [36^]: Gdt 8, 9.
 
 [^37]: Jn 1, 2 - 3.
+
+[^38]: 1 V 19, 4.
+
+[^39]: Ga 1, 46
+
+[^40]: Lc 24, 31.
+
+[^41]: Sự trần tục thiêng liêng là "một mối nguy hiểm nhất, một cơn cám dỗ xảo trá nhất, bao giờ cũng được tái sinh cách quỷ quyệt khi mọi thứ khác bị khuất phục và bao giờ cũng rút được sức mạnh từ những chiến thắng ấy". H. DE LUBAC, op. cit. De Lubac cũng định nghĩa đó như "một cái gì đó tự trình bày cách thực tiễn như một sự không dính bén với một thứ nào khác thuộc trần thế, nhưng lý tưởng luân lý và linh đạo, thay vì là vinh quang của Chúa, thì lại là con người và việc hoàn thiện mình. Sự trần tục thiêng liêng chẳng là gì cả chỉ là một thái độ qui con người cách triệt để. Thái độ này sẽ không thể được chữa trị trong trường hợp – giả như có thể - của người được ban cho những sự hoàn thiện thiêng liêng, những người không qui những sự hoàn thiện ấy cho Thiên Chúa. Nếu sự trần tục thiêng liêng ấy xâm chiếm Hội thánh và làm cho Hội thánh suy đồi bằng cách tấn công Hội thánh trong chính nguyên tắc của Hội thánh, thì nó sẽ tàn phá Hội thánh vô cùng hơn bất cứ thứ trần tục luân lý nào. Tệ hơn cả bệnh phong hôi thối, vào một lúc nào đó trong lịch sử, nó sẽ làm mèo mó khuôn mặt của Hiển thê yêu quý, khi tôn giáo dường như tạo nên gương mù gương xấu ngay trong cung thánh và được đại diện bởi Đức Giáo Hoàng truy lạc, che khuất khuôn mật của Đức Giêsu Kitô

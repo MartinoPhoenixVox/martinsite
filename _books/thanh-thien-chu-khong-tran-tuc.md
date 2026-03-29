@@ -1,6 +1,6 @@
 ---
-title: "THÁNH THIỆN chứ không TRẦN TỤC"
-author: "ĐỨC GIÁO HOÀNG PHANXICÔ"
+title: "Thánh Thiện Chứ Không Trần Tục"
+author: "Đức Giáo Hoàng Phanxicô"
 translator: "Lm. Đa Minh Nguyễn Đức Thông, CSsR"
 tags: [đức giáo hoàng, đức thánh cha, thánh thiện, trần tục]
 category: "Sách Thiêng Liêng"
