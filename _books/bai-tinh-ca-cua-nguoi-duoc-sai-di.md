@@ -1,9 +1,9 @@
 ---
 title: "BÀI TÌNH CA CỦA NGƯỜI ĐƯỢC SAI ĐI"
-author: "Đa Minh Trần Văn Tân, SJ."
+author: "ĐA MINH TRẦN VĂN TÂN, SJ."
 date: "2025-10-19"
-tags: [truyền giáo]
-category: "Tài Liệu Khác"
+tags: [TRUYỀN GIÁO, KHÁNH NHẬT TRUYỀN GIÁO]
+category: "TÀI LIỆU KHÁC"
 ---
 
 KHÁNH NHẬT TRUYỀN GIÁO 2025

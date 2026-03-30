@@ -1,8 +1,8 @@
 ---
 title: "CÁC BƯỚC XƯNG TỘI"
-author: "Xứ Đoàn Đức Maria - Mẹ Thiên Chúa"
-category: "Tài Liệu Khác"
-tags: [xưng tội, bí tích, bí tích hòa giải]
+author: "XỨ ĐOÀN ĐỨC MARIA - MẸ THIỆN CHÚA"
+category: "TÀI LIỆU KHÁC"
+tags: [XƯNG TỘI, BÍ TÍCH, BÍ TÍCH HÒA GIẢI]
 ---
 
 Tổng Giáo Phận Sài Gòn

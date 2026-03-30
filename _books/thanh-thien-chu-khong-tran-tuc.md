@@ -1,9 +1,9 @@
 ---
-title: "Thánh Thiện Chứ Không Trần Tục"
-author: "Đức Giáo Hoàng Phanxicô"
-translator: "Lm. Đa Minh Nguyễn Đức Thông, CSsR"
-tags: [đức giáo hoàng, đức thánh cha, thánh thiện, trần tục]
-category: "Sách Thiêng Liêng"
+title: "THÁNH THIỆN CHỨ KHÔNG TRẦN TỤC"
+author: "ĐỨC GIÁO HOÀNG PHANXICÔ"
+translator: "LM. ĐA MINH NGUYỄN ĐỨC THÔNG, CSsR"
+tags: [ĐỨC GIÁO HOÀNG, ĐỨC THÁNH CHA, ĐỨC THÁNH CHA PHANXICÔ, DIỄN VĂN]
+category: "SÁCH THIÊNG LIÊNG"
 book_id: "thanh-thien-chu-khong-tran-tuc"
 ---
 

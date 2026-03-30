@@ -13,6 +13,90 @@
         /* Thêm CSS hỗ trợ Dark Mode cho layout đọc sách */
         [data-theme="dark"] body { background-color: #1a1a1a !important; color: #e0e0e0 !important; }
         [data-theme="dark"] .top-bar, [data-theme="dark"] footer { background-color: #111 !important; }
+        /* --- PHẦN VÁ LỖI GIAO DIỆN ĐIỆN THOẠI (RESPONSIVE FIX) --- */
+
+        /* 1. Sửa lỗi Nút "Đọc ngay" không nằm dưới đáy trên Điện thoại */
+        /* Chúng ta sẽ dùng Flexbox để ép nội dung card phân bổ đều */
+
+        .category-section .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .category-section .card {
+            display: flex;
+            flex-direction: column; /* Chuyển card thành một cột Flex */
+            height: 100%; /* Đảm bảo card cao bằng nhau */
+        }
+
+        .category-section .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Đẩy các phần tử ra xa nhau nhất có thể */
+            flex-grow: 1; /* Cho phép body chiếm toàn bộ không gian còn lại */
+        }
+
+        .category-section .card-title {
+            /* Đảm bảo tiêu đề không chiếm quá nhiều không gian */
+            margin-bottom: 10px;
+        }
+
+        .category-section .text-muted {
+            /* Ép phần tác giả nằm ngay dưới tiêu đề */
+            margin-bottom: auto !important; /* Đẩy mọi thứ bên dưới nó (là nút bấm) xuống đáy */
+            padding-bottom: 20px; /* Tạo khoảng đệm nhỏ trên nút */
+        }
+
+        .category-section .btn-primary {
+            /* Tự động nằm dưới đáy */
+            width: 100%; /* Cho nút rộng hết cỡ trên điện thoại */
+            margin-top: 0;
+        }
+
+
+        /* 2. Sửa lỗi Header (Dropdown Menu) không hiện trên Điện thoại */
+        /* Thường do màu sắc hoặc z-index của bộ Novelty bị xung đột */
+
+        @media (max-width: 991px) {
+            /* Điều chỉnh khi menu được sổ ra */
+            #navbarSupportedContent {
+                background-color: white; /* Ép nền trắng cho menu để nhìn thấy chữ */
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
+                position: relative; /* Tạo ngữ cảnh xếp chồng */
+            }
+
+            /* Đảm bảo các link trong menu có màu tối để đọc được */
+            #navbarSupportedContent .nav-link {
+                color: #333 !important;
+                padding: 10px 0;
+            }
+
+            /* Vá lỗi dropdown 'Cửa hàng' bị ẩn */
+            #navbarSupportedContent .dropdown-menu {
+                display: none; /* Mặc định ẩn */
+                position: static; /* Không dùng fixed/absolute trên mobile */
+                float: none;
+                width: 100%;
+                background-color: #f8f9fa; /* Màu nền nhẹ cho menu con */
+                border: none;
+            }
+
+            /* Hiện menu con khi dropdown được active */
+            #navbarSupportedContent .dropdown.show .dropdown-menu,
+            #navbarSupportedContent .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+
+            /* Đảm bảo nút form search không bị mất */
+            #navbarSupportedContent .form-search {
+                margin-top: 15px;
+                display: flex;
+                width: 100%;
+            }
+        }
     </style>
     {% endif %}
 </head>
@@ -38,7 +122,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-12 col-footer">
                     <h3 class="footer-title">Martinsite</h3>
-                    <p class="footer-text">Thư viện sách Công Giáo</p>
+                    <p class="footer-text">Thư viện sách của Martinô Võ Huỳnh Thanh Phương</p>
                 </div>
             </div>
         </div>
