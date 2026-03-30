@@ -14,91 +14,87 @@
         [data-theme="dark"] body { background-color: #1a1a1a !important; color: #e0e0e0 !important; }
         [data-theme="dark"] .top-bar, [data-theme="dark"] footer { background-color: #111 !important; }
         /* ============================================================
-        FIX LỖI NÚT "ĐỌC NGAY" (FLEXBOX OVERRIDE)
+        SUPER FIX: NÚT ĐÍNH ĐÁY & HIỆN MENU MOBILE (NOVELTY THEME)
         ============================================================ */
 
-        /* Ép các cột chứa card phải có chiều cao bằng nhau */
+        /* 1. Đảm bảo tất cả các cột chứa sách có độ cao bằng nhau */
         .category-section .row {
             display: flex !important;
             flex-wrap: wrap !important;
+            align-items: stretch !important; /* Ép các cột dài bằng nhau */
         }
 
-        .category-section .col-6, 
-        .category-section .col-md-4, 
-        .category-section .col-lg-3 {
-            display: flex !important;
-            flex-direction: column !important;
-            margin-bottom: 25px !important;
-        }
-
-        /* Ép thẻ card chiếm 100% chiều cao cột */
+        /* 2. Cấu trúc lại Card để nút luôn dính đáy */
         .category-section .card {
             display: flex !important;
             flex-direction: column !important;
-            height: 100% !important; 
-            margin: 0 !important;
+            height: 100% !important; /* Chiếm hết chiều cao cột */
+            margin-bottom: 0 !important;
         }
 
-        /* Ép thân card (body) phải dãn ra để chiếm không gian */
         .category-section .card-body {
             display: flex !important;
             flex-direction: column !important;
-            flex: 1 0 auto !important; /* Dãn để chiếm hết chiều cao còn lại */
-            padding: 15px !important;
-            justify-content: flex-start !important;
+            flex: 1 0 auto !important; /* Chiếm toàn bộ không gian còn lại */
+            padding-bottom: 15px !important;
         }
 
-        /* Ép nội dung (title, author) không được đẩy nút đi sai chỗ */
         .category-section .card-title {
-            min-height: 48px !important; /* Đảm bảo các dòng tiêu đề bằng nhau */
-            margin-bottom: 10px !important;
+            flex-grow: 0 !important;
+            min-height: 3em !important; /* Giữ chỗ cho tiêu đề 2 dòng */
         }
 
         .category-section .text-muted {
-            margin-bottom: 20px !important;
-            flex-grow: 1 !important; /* ĐÂY LÀ CHÌA KHÓA: Đẩy mọi thứ bên dưới nó xuống đáy */
-        }
-
-        /* Nút bấm dính sát đáy */
-        .category-section .btn-primary {
-            margin-top: auto !important; 
-            width: 100% !important;
+            flex-grow: 1 !important; /* ĐÂY LÀ KHÓA CHÍNH: Nó sẽ giãn ra để đẩy nút xuống */
             display: block !important;
+            margin-bottom: 20px !important;
         }
 
-        /* ============================================================
-        FIX LỖI MENU TRÊN MOBILE (DISPLAY & Z-INDEX)
-        ============================================================ */
+        .category-section .btn-primary {
+            margin-top: auto !important; /* Ép nút dính sát đáy card-body */
+            align-self: center !important;
+            width: 100% !important;
+        }
 
+        /* 3. Hiện Menu Header trên điện thoại */
         @media (max-width: 991px) {
-            /* Ép thanh Menu hiện ra khi bấm nút Hamburger */
+            /* Đảm bảo nút 3 gạch (Hamburger) luôn có màu để nhìn thấy */
+            .navbar-toggler {
+                border-color: #333 !important;
+                background-color: #f8f9fa !important;
+                display: block !important;
+            }
+            
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3Base path fill='rgba(0, 0, 0, 0.5)' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+            }
+
+            /* Ép menu hiện ra khi bấm nút */
             .navbar-collapse.collapse.show {
                 display: block !important;
-                visibility: visible !important;
                 background-color: #ffffff !important;
                 position: absolute !important;
                 top: 100% !important;
                 left: 0 !important;
-                width: 100% !important;
-                z-index: 99999 !important;
+                right: 0 !important;
+                z-index: 10000 !important;
                 padding: 20px !important;
                 box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
-                border-top: 1px solid #eee !important;
+                max-height: 80vh !important;
+                overflow-y: auto !important;
             }
 
-            /* Đảm bảo chữ menu không bị màu trắng (tàng hình) */
+            /* Chỉnh màu chữ menu cho rõ ràng */
             .navbar-nav .nav-link {
-                color: #222222 !important;
-                font-weight: 500 !important;
+                color: #333 !important;
+                font-weight: 600 !important;
                 padding: 12px 0 !important;
-                border-bottom: 1px solid #f0f0f0 !important;
-                text-align: left !important;
+                border-bottom: 1px solid #eee !important;
             }
-
-            /* Đảm bảo nút bấm (Toggle) luôn hiển thị */
-            .navbar-toggler {
-                border-color: #333 !important;
-                outline: none !important;
+            
+            /* Hiện các icon bên phải nếu bị ẩn */
+            .header-right {
+                display: flex !important;
             }
         }
     </style>
