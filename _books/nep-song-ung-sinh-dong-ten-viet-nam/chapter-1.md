@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "I. MỤC ĐÍCH VÀ KHUÔN MẪU"
 book_id: "nep-song-ung-sinh-dong-ten-viet-nam"
 is_chapter: true

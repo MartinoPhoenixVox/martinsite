@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "NẾP SỐNG ỨNG SINH DÒNG TÊN VIỆT NAM"
 author: "NHÀ ỨNG SINH DÒNG TÊN VIỆT NAM"
 category: "SÁCH KHÁC"
