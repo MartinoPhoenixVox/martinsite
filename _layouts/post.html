@@ -1,17 +1,55 @@
 ---
 layout: default
 ---
-<div class="chapter-nav-top" style="position: sticky; top: 0; background: var(--nav-bg); z-index: 1000; padding: 10px 0;">
+<div class="chapter-nav-top" style="
+    position: sticky; 
+    top: 0; 
+    background: var(--nav-bg, #ffffff); 
+    z-index: 1000; 
+    border-bottom: 1px solid #eee; 
+    padding: 10px 0;
+    margin-top: -2px; 
+    box-shadow: 0 -10px 0 0 var(--nav-bg, #ffffff), 0 2px 5px rgba(0,0,0,0.05);
+">
     <div class="container d-flex justify-content-between align-items-center">
-        {% assign all_in_book = site.books | where: "book_id", page.book_id | where_exp: "item", "item.order != nil" | sort: "order" %}
-        {% for item in all_in_book %}{% if item.url == page.url %}
-            {% assign current_index = forloop.index0 %}
-            {% assign prev_idx = current_index | minus: 1 %}{% assign next_idx = current_index | plus: 1 %}
-            
-            {% if prev_idx >= 0 %}<a href="{{ all_in_book[prev_idx].url | relative_url }}" class="btn btn-sm btn-outline-primary">« Trước</a>{% else %}<span></span>{% endif %}
-            <span class="text-muted small">{{ page.title }}</span>
-            {% if next_idx < all_in_book.size %}<a href="{{ all_in_book[next_idx].url | relative_url }}" class="btn btn-sm btn-outline-primary">Sau »</a>{% else %}<span></span>{% endif %}
-        {% endif %}{% endfor %}
+        {% comment %} 1. Lấy danh sách tất cả chương trong cùng 1 bộ sách và sắp xếp {% endcomment %}
+        {% assign all_chapters = site.books | where: "book_id", page.book_id | sort: "order" %}
+        
+        {% comment %} 2. Tìm vị trí của trang hiện tại {% endcomment %}
+        {% for item in all_chapters %}
+            {% if item.url == page.url %}
+                {% assign current_idx = forloop.index0 %}
+                {% assign prev_idx = current_idx | minus: 1 %}
+                {% assign next_idx = current_idx | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+
+        {% comment %} 3. Nút TRƯỚC {% endcomment %}
+        {% if prev_idx >= 0 %}
+            {% for item in all_chapters %}
+                {% if forloop.index0 == prev_idx %}
+                    <a href="{{ item.url | relative_url }}" class="btn btn-sm btn-outline-primary">« Trước</a>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <span class="btn btn-sm btn-outline-secondary disabled" style="opacity: 0.5;">« Đầu</span>
+        {% endif %}
+
+        {% comment %} 4. Tiêu đề ở giữa {% endcomment %}
+        <span class="text-muted small fw-bold" style="max-width: 50%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+            {{ page.title }}
+        </span>
+
+        {% comment %} 5. Nút SAU {% endcomment %}
+        {% if next_idx < all_chapters.size %}
+            {% for item in all_chapters %}
+                {% if forloop.index0 == next_idx %}
+                    <a href="{{ item.url | relative_url }}" class="btn btn-sm btn-outline-primary">Sau »</a>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <span class="btn btn-sm btn-outline-secondary disabled" style="opacity: 0.5;">Hết »</span>
+        {% endif %}
     </div>
 </div>
 
