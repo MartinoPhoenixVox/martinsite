@@ -14,93 +14,91 @@
         [data-theme="dark"] body { background-color: #1a1a1a !important; color: #e0e0e0 !important; }
         [data-theme="dark"] .top-bar, [data-theme="dark"] footer { background-color: #111 !important; }
         /* ============================================================
-        FIX LỖI NÚT "ĐỌC NGAY" VÀ HEADER TRÊN MOBILE
+        FIX LỖI NÚT "ĐỌC NGAY" (FLEXBOX OVERRIDE)
         ============================================================ */
 
-        /* 1. Ép các Card bằng chiều cao nhau và đẩy nút xuống đáy */
+        /* Ép các cột chứa card phải có chiều cao bằng nhau */
         .category-section .row {
-            display: flex;
-            flex-wrap: wrap;
+            display: flex !important;
+            flex-wrap: wrap !important;
         }
 
         .category-section .col-6, 
         .category-section .col-md-4, 
         .category-section .col-lg-3 {
-            display: flex; /* Đảm bảo các cột có chiều cao bằng nhau */
-            margin-bottom: 20px;
+            display: flex !important;
+            flex-direction: column !important;
+            margin-bottom: 25px !important;
         }
 
+        /* Ép thẻ card chiếm 100% chiều cao cột */
         .category-section .card {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%; /* Ép card chiếm hết chiều cao cột */
-            border: 1px solid #eee;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #fff;
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100% !important; 
+            margin: 0 !important;
         }
 
+        /* Ép thân card (body) phải dãn ra để chiếm không gian */
         .category-section .card-body {
-            display: flex;
-            flex-direction: column;
-            flex: 1; /* Chiếm toàn bộ không gian còn trống */
-            padding: 15px;
-            text-align: center;
+            display: flex !important;
+            flex-direction: column !important;
+            flex: 1 0 auto !important; /* Dãn để chiếm hết chiều cao còn lại */
+            padding: 15px !important;
+            justify-content: flex-start !important;
         }
 
+        /* Ép nội dung (title, author) không được đẩy nút đi sai chỗ */
         .category-section .card-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            min-height: 40px; /* Giữ chỗ cho tiêu đề để các card đều nhau */
+            min-height: 48px !important; /* Đảm bảo các dòng tiêu đề bằng nhau */
+            margin-bottom: 10px !important;
         }
 
         .category-section .text-muted {
-            font-size: 13px;
-            margin-bottom: 15px !important;
-            flex-grow: 1; /* CHIÊU QUAN TRỌNG: Đẩy nút bấm xuống đáy */
+            margin-bottom: 20px !important;
+            flex-grow: 1 !important; /* ĐÂY LÀ CHÌA KHÓA: Đẩy mọi thứ bên dưới nó xuống đáy */
         }
 
+        /* Nút bấm dính sát đáy */
         .category-section .btn-primary {
-            margin-top: auto; /* Đảm bảo nút luôn dính đáy body */
-            width: 100%;
-            padding: 8px;
-            font-weight: 600;
+            margin-top: auto !important; 
+            width: 100% !important;
+            display: block !important;
         }
 
-        /* 2. Fix Header bị mất Menu trên Mobile */
+        /* ============================================================
+        FIX LỖI MENU TRÊN MOBILE (DISPLAY & Z-INDEX)
+        ============================================================ */
+
         @media (max-width: 991px) {
-            /* Hiển thị nút bấm menu (Hamburger) */
-            .navbar-toggler {
+            /* Ép thanh Menu hiện ra khi bấm nút Hamburger */
+            .navbar-collapse.collapse.show {
                 display: block !important;
-                border-color: rgba(0,0,0,0.1);
+                visibility: visible !important;
+                background-color: #ffffff !important;
+                position: absolute !important;
+                top: 100% !important;
+                left: 0 !important;
+                width: 100% !important;
+                z-index: 99999 !important;
+                padding: 20px !important;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+                border-top: 1px solid #eee !important;
             }
 
-            /* Hiển thị menu khi xổ xuống */
-            .navbar-collapse {
-                background: #ffffff !important; /* Ép nền trắng để không bị tàng hình */
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                z-index: 9999;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-                padding: 15px;
-                border-top: 1px solid #eee;
-            }
-
-            /* Màu chữ menu trên mobile */
+            /* Đảm bảo chữ menu không bị màu trắng (tàng hình) */
             .navbar-nav .nav-link {
-                color: #333 !important;
-                padding: 10px 15px !important;
-                border-bottom: 1px solid #f5f5f5;
+                color: #222222 !important;
+                font-weight: 500 !important;
+                padding: 12px 0 !important;
+                border-bottom: 1px solid #f0f0f0 !important;
+                text-align: left !important;
             }
 
-            /* Đảm bảo icon giỏ hàng/user không bị đè */
-            .header-right {
-                display: flex !important;
-                align-items: center;
+            /* Đảm bảo nút bấm (Toggle) luôn hiển thị */
+            .navbar-toggler {
+                border-color: #333 !important;
+                outline: none !important;
             }
         }
     </style>
