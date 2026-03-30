@@ -28,5 +28,7 @@ Nhà Ứng sinh Dòng Tên đảm nhận việc đào luyện các ứng sinh th
 ## 6
 
 Chính gia đình thánh của Chúa Giêsu ở Nazareth là khuôn mẫu sống động nhất của Nhà Ứng sinh Dòng Tên.
+
 Trước khi bắt đầu sứ vụ công khai, Chúa Giêsu đã sống dưới mái gia đình Nazareth một thời gian lâu dài, nhờ đó Người đạt được kết quả tích cực: Người ngày càng khôn lớn và được Thiên Chúa cũng như mọi người thương mến.
+
 Hôm nay, các ứng sinh cũng tìm sống Mầu nhiệm Nazareth trong khung cảnh Nhà Ứng sinh: họ tập sống dưới con mắt yêu thương của Chúa Cha. Theo gương Chúa Giêsu Nazareth, họ cố gắng chu toàn các việc bổn phận thường ngày trong âm thầm, yêu mến và vâng phục. Họ muốn đồng chí hướng và tâm hồn với Người. Tất cả là để phục vụ Nước Cha.

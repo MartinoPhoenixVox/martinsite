@@ -111,13 +111,19 @@
                 <div class="col-xl-4 top-center"><p>Chào mừng bạn đến với Thư viện Martin!</p></div>
                 <div class="col-xl-4 top-right d-xl-block d-none">
                     <ul><li><a href="{{ '/' | relative_url }}">Trang chủ</a></li><li><a href="{{ '/about/' | relative_url }}">Giới thiệu</a></li><li><a href="{{ '/thisproject/' | relative_url }}">Dự án</a></li></ul>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto"></ul>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto"></ul>
+                    </div>
+                    <div class="search-container mt-3 mb-4 text-center">
+                        <div class="input-group mx-auto" style="max-width: 600px;">
+                            <input type="text" id="searchInput" class="form-control" placeholder="Tìm theo tên sách hoặc thẻ (ví dụ: lịch sử, kinh dị...)" onkeyup="liveSearch()">
+                            <span class="input-group-text bg-primary text-white"><i class="fa fa-search"></i></span>
+                        </div>
+                        <div id="searchResults" class="list-group mt-2 shadow" style="max-width: 600px; margin: 0 auto; position: absolute; left: 0; right: 0; z-index: 2000; display: none; background: white;"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -141,5 +147,52 @@
     <script src="{{ '/Js/jquery-3.7.1.min.js' | relative_url }}"></script>
     <script src="{{ '/Js/bootstrap.bundle.min.js' | relative_url }}"></script>
     <script src="{{ '/Js/script.js' | relative_url }}"></script>
+    <script>
+        let searchData = [];
+
+        // 1. Tải dữ liệu từ file JSON đã tạo ở Bước 1
+        fetch("{{ '/search_data.json' | relative_url }}")
+            .then(response => response.json())
+            .then(data => {
+                searchData = data;
+            });
+
+        function liveSearch() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let resultsDiv = document.getElementById('searchResults');
+            
+            if (input.length < 1) {
+                resultsDiv.style.display = 'none';
+                return;
+            }
+
+            // 2. Lọc theo Title HOẶC Tags
+            let filtered = searchData.filter(item => {
+                return item.title.toLowerCase().includes(input) || 
+                    (item.tags && item.tags.toLowerCase().includes(input));
+            });
+
+            // 3. Hiển thị kết quả
+            if (filtered.length > 0) {
+                resultsDiv.innerHTML = filtered.map(item => `
+                    <a href="${item.url}" class="list-group-item list-group-item-action text-start">
+                        <div class="fw-bold">${item.title}</div>
+                        <small class="text-muted">Tags: ${item.tags || 'Không có'}</small>
+                    </a>
+                `).join('');
+                resultsDiv.style.display = 'block';
+            } else {
+                resultsDiv.innerHTML = '<div class="list-group-item text-muted">Không tìm thấy sách nào...</div>';
+                resultsDiv.style.display = 'block';
+            }
+        }
+
+        // Đóng kết quả khi click ra ngoài
+        document.addEventListener('click', function(e) {
+            if (e.target.id !== 'searchInput') {
+                document.getElementById('searchResults').style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
