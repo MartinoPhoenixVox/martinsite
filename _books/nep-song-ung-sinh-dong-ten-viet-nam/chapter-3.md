@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "III. ĐÀO LUYỆN TOÀN DIỆN NĂM PHƯƠNG DIỆN"
 book_id: "nep-song-ung-sinh-dong-ten-viet-nam"
 is_chapter: true
