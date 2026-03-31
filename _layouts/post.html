@@ -1,22 +1,17 @@
 ---
 layout: default
 ---
-<div class="chapter-nav-top" style="
-    position: sticky; 
-    top: 0; 
-    background: var(--nav-bg, #ffffff); 
-    z-index: 1000; 
-    border-bottom: 1px solid #eee; 
-    padding: 10px 0;
-    margin-top: -2px; 
-    box-shadow: 0 -10px 0 0 var(--nav-bg, #ffffff), 0 2px 5px rgba(0,0,0,0.05);
-">
+<div class="chapter-nav-top" style="position: sticky; top: 0; background: var(--nav-bg, #ffffff); z-index: 1000; border-bottom: 1px solid #eee; padding: 10px 0; margin-top: -2px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
     <div class="container d-flex justify-content-between align-items-center">
-        {% comment %} 1. Lấy danh sách tất cả chương trong cùng 1 bộ sách và sắp xếp {% endcomment %}
-        {% assign all_chapters = site.books | where: "book_id", page.book_id | sort: "order" %}
         
-        {% comment %} 2. Tìm vị trí của trang hiện tại {% endcomment %}
-        {% for item in all_chapters %}
+        {% comment %} 1. Lọc chính xác các chương thuộc cùng một book_id {% endcomment %}
+        {% assign book_chapters = site.books | where: "book_id", page.book_id | where: "is_chapter", true | sort: "order" %}
+        
+        {% comment %} 2. Xác định Index, Chương đầu và Chương cuối {% endcomment %}
+        {% assign first_chapter = book_chapters | first %}
+        {% assign last_chapter = book_chapters | last %}
+        
+        {% for item in book_chapters %}
             {% if item.url == page.url %}
                 {% assign current_idx = forloop.index0 %}
                 {% assign prev_idx = current_idx | minus: 1 %}
@@ -24,32 +19,33 @@ layout: default
             {% endif %}
         {% endfor %}
 
-        {% comment %} 3. Nút TRƯỚC {% endcomment %}
-        {% if prev_idx >= 0 %}
-            {% for item in all_chapters %}
-                {% if forloop.index0 == prev_idx %}
-                    <a href="{{ item.url | relative_url }}" class="btn btn-sm btn-outline-primary">« Trước</a>
-                {% endif %}
-            {% endfor %}
-        {% else %}
-            <span class="btn btn-sm btn-outline-secondary disabled" style="opacity: 0.5;">« Đầu</span>
-        {% endif %}
+        <div class="nav-groups">
+            {% if first_chapter and page.url != first_chapter.url %}
+                <a href="{{ first_chapter.url | relative_url }}" class="btn btn-sm btn-outline-secondary me-1" title="Chương đầu"><i class="fa fa-angle-double-left"></i></a>
+            {% endif %}
+            
+            {% if prev_idx >= 0 %}
+                <a href="{{ book_chapters[prev_idx].url | relative_url }}" class="btn btn-sm btn-outline-primary">« Trước</a>
+            {% else %}
+                <span class="btn btn-sm btn-outline-light disabled text-muted">« Trước</span>
+            {% endif %}
+        </div>
 
-        {% comment %} 4. Tiêu đề ở giữa {% endcomment %}
-        <span class="text-muted small fw-bold" style="max-width: 50%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+        <span class="text-muted small fw-bold d-none d-md-inline" style="max-width: 30%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
             {{ page.title }}
         </span>
 
-        {% comment %} 5. Nút SAU {% endcomment %}
-        {% if next_idx < all_chapters.size %}
-            {% for item in all_chapters %}
-                {% if forloop.index0 == next_idx %}
-                    <a href="{{ item.url | relative_url }}" class="btn btn-sm btn-outline-primary">Sau »</a>
-                {% endif %}
-            {% endfor %}
-        {% else %}
-            <span class="btn btn-sm btn-outline-secondary disabled" style="opacity: 0.5;">Hết »</span>
-        {% endif %}
+        <div class="nav-groups text-end">
+            {% if next_idx < book_chapters.size %}
+                <a href="{{ book_chapters[next_idx].url | relative_url }}" class="btn btn-sm btn-outline-primary">Sau »</a>
+            {% else %}
+                <span class="btn btn-sm btn-outline-light disabled text-muted">Sau »</span>
+            {% endif %}
+
+            {% if last_chapter and page.url != last_chapter.url %}
+                <a href="{{ last_chapter.url | relative_url }}" class="btn btn-sm btn-outline-secondary ms-1" title="Chương cuối"><i class="fa fa-angle-double-right"></i></a>
+            {% endif %}
+        </div>
     </div>
 </div>
 
