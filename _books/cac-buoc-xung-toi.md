@@ -1,8 +1,10 @@
 ---
+layout: post
 title: "CÁC BƯỚC XƯNG TỘI"
 author: "XỨ ĐOÀN ĐỨC MARIA - MẸ THIỆN CHÚA"
 category: "TÀI LIỆU KHÁC"
 tags: [XƯNG TỘI, BÍ TÍCH, BÍ TÍCH HÒA GIẢI]
+is_chapter: false
 ---
 
 Tổng Giáo Phận Sài Gòn

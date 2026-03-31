@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SUY TƯ VỀ CHỦ ĐỀ TÌNH TRẠNG SUY ĐỒI"
 book_id: "thanh-thien-chu-khong-tran-tuc"
 is_chapter: true
