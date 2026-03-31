@@ -15,10 +15,10 @@ title: Thư viện Martin
             {% for book in group.items %}
             <div class="col-lg-3 col-md-4 col-6 mb-4">
                 <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
+                    <div class="card-body text-center d-flex flex-column">
                         <h5 class="card-title">{{ book.title }}</h5>
-                        <p class="small text-muted">Tác giả: {{ book.author | default: "Cập nhật..." }}</p>
-                        <a href="{{ book.url | relative_url }}" class="btn btn-sm btn-primary">Đọc ngay</a>
+                        <p class="small text-muted mb-auto">Tác giả: {{ book.author | default: "Cập nhật..." }}</p>
+                        <a href="{{ book.url | relative_url }}" class="btn btn-sm btn-primary mt-3">Đọc ngay</a>
                     </div>
                 </div>
             </div>
