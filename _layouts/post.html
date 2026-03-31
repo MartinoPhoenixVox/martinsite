@@ -65,19 +65,23 @@ layout: default
             <h1 class="text-center mb-4">{{ page.title }}</h1>
             {% comment %} CHỈ HIỆN MỤC LỤC Ở TRANG GỐC (TRANG KHÔNG PHẢI LÀ CHƯƠNG) {% endcomment %}
             {% if page.is_chapter != true %}
-            <div class="chapter-list mt-4">
-                <h1>Mục lục</h1>
-                <div class="list-group">
-                    {% comment %} Lọc đúng book_id của trang hiện tại và phải là is_chapter {% endcomment %}
-                    {% assign current_book_chapters = site.books | where: "book_id", page.book_id | where: "is_chapter", true | sort: "order" %}
-                    
-                    {% for chapter in current_book_chapters %}
-                        <a href="{{ chapter.url | relative_url }}" class="list-group-item list-group-item-action">
-                            {{ chapter.order }}. {{ chapter.title }}
-                        </a>
-                    {% endfor %}
-                </div>
-            </div>
+                {% comment %} 1. Lấy danh sách chương của RIÊNG sách này {% endcomment %}
+                {% assign current_book_chapters = site.books | where: "book_id", page.book_id | where: "is_chapter", true | sort: "order" %}
+                
+                {% comment %} 2. CHỈ hiện khung Mục lục nếu danh sách chương không rỗng {% endcomment %}
+                {% if current_book_chapters.size > 0 %}
+                    <div class="chapter-list mt-4">
+                        <h3 class="border-bottom pb-2">Mục lục</h3>
+                        <div class="list-group shadow-sm">
+                            {% for chapter in current_book_chapters %}
+                                <a href="{{ chapter.url | relative_url }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                    <span>{{ chapter.order }}. {{ chapter.title }}</span>
+                                    <i class="fa fa-chevron-right text-muted small"></i>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
             {% endif %}
             <div style="text-align: justify; line-height: 1.8; font-size: 18px; transition: 0.3s;">
                 <hr>
