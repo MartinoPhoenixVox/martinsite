@@ -66,7 +66,7 @@ layout: default
             {% comment %} CHỈ HIỆN MỤC LỤC Ở TRANG GỐC (TRANG KHÔNG PHẢI LÀ CHƯƠNG) {% endcomment %}
             {% if page.is_chapter != true %}
             <div class="chapter-list mt-4">
-                <h3>Mục lục</h3>
+                <h1>Mục lục</h1>
                 <div class="list-group">
                     {% comment %} Lọc đúng book_id của trang hiện tại và phải là is_chapter {% endcomment %}
                     {% assign current_book_chapters = site.books | where: "book_id", page.book_id | where: "is_chapter", true | sort: "order" %}
