@@ -176,7 +176,8 @@
             // 2. Lọc theo Title HOẶC Tags
             let filtered = searchData.filter(item => {
                 return item.title.toLowerCase().includes(input) || 
-                    (item.tags && item.tags.toLowerCase().includes(input));
+                    (item.tags && item.tags.toLowerCase().includes(input)) || 
+                    (item.author && item.author.toLowerCase().includes(input));
             });
 
             // 3. Hiển thị kết quả
