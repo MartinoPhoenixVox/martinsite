@@ -5,7 +5,7 @@ author: "XỨ ĐOÀN ĐỨC MARIA - MẸ THIỆN CHÚA"
 category: "TÀI LIỆU KHÁC"
 tags: [XƯNG TỘI, BÍ TÍCH, BÍ TÍCH HÒA GIẢI]
 is_chapter: false
-book-id: "tlkh0002"
+book_id: "tlkh0002"
 ---
 
 Tổng Giáo Phận Sài Gòn
