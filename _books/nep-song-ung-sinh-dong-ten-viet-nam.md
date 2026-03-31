@@ -1,8 +1,8 @@
 ---
 title: "NẾP SỐNG ỨNG SINH DÒNG TÊN VIỆT NAM"
 author: "NHÀ ỨNG SINH DÒNG TÊN VIỆT NAM"
-category: "SÁCH KHÁC"
-tags: [NẾP SỐNG, ỨNG SINH DÒNG TÊN, DÒNG TÊN]
+category: "SÁCH THIÊNG LIÊNG"
+tags: [NẾP SỐNG, ỨNG SINH, ỨNG SINH DÒNG TÊN, DÒNG TÊN]
 book_id: "nep-song-ung-sinh-dong-ten-viet-nam"
 ---
 
