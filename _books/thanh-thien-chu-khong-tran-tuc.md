@@ -15,24 +15,6 @@ THÁNH THIỆN chứ không TRẦN TỤC
 
 ÂN SỦNG CỦA THIÊN CHÚA CỨU TA KHỎI SỰ ĐỒI BẠI TRONG LÒNG
 
----
-
-## Danh sách các chương
-<ul>
-  {% assign current_book_id = page.book_id %}
-  {% assign chapters = site.books | where: "book_id", current_book_id | where: "is_chapter", true | sort: "order" %}
-
-  {% for chapter in chapters %}
-    <li>
-      <a href="{{ chapter.url | relative_url }}">
-        {{ chapter.title }}
-      </a>
-    </li>
-  {% endfor %}
-</ul>
-
----
-
 ## Lời giới thiệu
 
 Cuộc sống Kitô hữu là một cuộc chiến đấu, một cuộc chiến nội tâm nhằm khắc phục cơn cám dỗ khép mình lại và để cho tình yêu của Cha chúng ta, Đấng bao giờ cũng khát mong hạnh phúc cho ta, cư ngụ trong ta. Đây là một cuộc chiến cao đẹp vì khi ta để Chúa chiến thắng trong mình, lòng ta sẽ hân hoan nhảy múa tưng bừng và sự sống ta sẽ được tia sáng vô biên sáng soi.
