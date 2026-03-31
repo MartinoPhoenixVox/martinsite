@@ -6,6 +6,7 @@ date: "2025-10-19"
 tags: [TRUYỀN GIÁO, KHÁNH NHẬT TRUYỀN GIÁO]
 category: "TÀI LIỆU KHÁC"
 is_chapter: false
+book_id: "tlkh0001"
 ---
 
 KHÁNH NHẬT TRUYỀN GIÁO 2025

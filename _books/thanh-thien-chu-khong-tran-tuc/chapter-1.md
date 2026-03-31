@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SUY TƯ VỀ CHỦ ĐỀ TÌNH TRẠNG SUY ĐỒI"
-book_id: "thanh-thien-chu-khong-tran-tuc"
+book_id: "tlie0002"
 is_chapter: true
 order: 1
 ---

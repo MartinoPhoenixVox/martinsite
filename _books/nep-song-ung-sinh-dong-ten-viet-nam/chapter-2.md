@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "II. MỘT VÀI NGUYÊN TẮC CĂN BẢN"
-book_id: "nep-song-ung-sinh-dong-ten-viet-nam"
+book_id: "tlie0001"
 is_chapter: true
 order: 2
 ---

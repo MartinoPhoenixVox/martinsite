@@ -6,7 +6,7 @@ translator: "LM. ĐA MINH NGUYỄN ĐỨC THÔNG, CSsR"
 tags: [ĐỨC GIÁO HOÀNG, ĐỨC THÁNH CHA, ĐỨC THÁNH CHA PHANXICÔ, DIỄN VĂN]
 category: "SÁCH THIÊNG LIÊNG"
 is_chapter: false
-book_id: "thanh-thien-chu-khong-tran-tuc"
+book_id: "tlie0002"
 ---
 
 ĐỨC GIÁO HOÀNG PHANXICÔ
