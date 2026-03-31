@@ -110,6 +110,15 @@ layout: default
 <button id="backToTop" class="btn btn-secondary rounded-circle shadow" onclick="window.scrollTo({top:0, behavior:'smooth'})" style="position:fixed; bottom:30px; right:20px; display:none; width:50px; height:50px;">↑</button>
 
 <script>
+    // Tự động lưu vị trí sau khi người dùng ngừng cuộn 2 giây
+    let isScrolling;
+    window.addEventListener('scroll', function (event) {
+      window.clearTimeout(isScrolling);
+      isScrolling = setTimeout(function() {
+        localStorage.setItem('bookmark_pos_' + pageId, window.scrollY);
+      }, 2000);
+    }, false);
+
     // Logic Dark Mode, Cỡ chữ, Dấu trang (Giống bản trước tớ đã viết cho cậu)
     function setTheme(t){ document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
     function changeFontSize(a){
@@ -129,13 +138,4 @@ layout: default
         const p = localStorage.getItem('mark_'+pId); if(p) setTimeout(()=>window.scrollTo({top:p, behavior:'smooth'}), 500);
     };
     window.onscroll = () => { document.getElementById('backToTop').style.display = (window.scrollY > 300)? 'block':'none'; };
-
-    // Tự động lưu vị trí sau khi người dùng ngừng cuộn 2 giây
-    let isScrolling;
-    window.addEventListener('scroll', function (event) {
-      window.clearTimeout(isScrolling);
-      isScrolling = setTimeout(function() {
-        localStorage.setItem('bookmark_pos_' + pageId, window.scrollY);
-      }, 2000);
-    }, false);
 </script>
