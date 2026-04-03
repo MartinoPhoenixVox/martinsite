@@ -210,4 +210,57 @@ In order to practice a spirit of responsible dependence, the candidate should su
 
 ### 50
 
-Intellectual formation plays an essential role in the candidacy program because of its importance in preparing for the apostolic vocation in the Society of Jesus. Fully aware
+Intellectual formation plays an essential role in the candidacy program because of its importance in preparing for the apostolic vocation in the Society of Jesus. Fully aware that study is his principal obligation, the candidate is expected to fulfill it diligently and generously as an expression of love for God and for souls. His earnest and sustained efforts in study are also a concrete way of exercising the apostolate, following the example of Jesus of Nazareth.
+
+### 51
+
+At school, the candidate should devote his full attention and effort to the instruction of teachers and spiritual guides, showing serious academic commitment and a spirit of inquiry. He must also observe all school regulations, as any good student would, and avoid attitudes or behaviors that could lead to misconduct.
+
+### 52
+
+At home, the candidate should make good use of study time, free time, and the assistance of his superiors and fellow brothers in order to deepen his understanding of academic subjects, which are instruments for better service of God and of souls.
+
+### 53
+
+Intellectual work requires a quiet environment; therefore, the candidates' house must ensure designated times and spaces of silence. For example, in a two-story house, the upper floor should be reserved as a silent area, while the other floor may be used for quiet discussion.
+
+### 54
+
+Private rooms and personal desks are to remain silent at all times. Candidates should avoid causing any disturbance through noise and should not enter another's private room. If a candidate wishes to speak with a brother, he should knock and invite him to a suitable place where quiet conversation is permitted, such as a corridor, kitchen, or courtyard
+
+### 55
+
+During scheduled study hours, candidates are to study in their private rooms or at their desks, except for additional evening study hours, when the common room or another appropriate place may be used. Practice of foreign-language speaking skills may take place in the common room or recreation area, provided that it does not disturb others. Candidates should also avoid forming distracting clusters or groups.
+
+### 56
+
+When necessary, candidates may discuss academic subjects with one another, but only during free time and in a low voice, so as not to waste time or disturb the atmosphere of silence. Such consultation does not mean completing assignments together, relying excessively on others' help, or imposing on another's time. Candidates should act with prudence, confidence, respect for personal integrity, and a sincere desire for excellence and charity in seeking assistance.
+
+### 57
+
+Candidates meet with the Father Director several times a year to report on their studies and to seek his guidance in planning their academic work. Any decision to discontinue a subject requires the approval of both the Father Director and the professor concerned.
+
+### 58
+
+If there are special programs or issues at school, candidates are to inform the Father Director so that school schedules may be coordinated with the community program.
+
+### 59
+
+With regard to books and newspapers, candidates must observe the library regulations carefully whenever they borrow materials, whether for reading or for reference.
+
+## E. APOSTOLATE
+
+### 60
+
+Every effort in the formation of a candidate is directed toward preparing him to become an effective apostle in the service of the Kingdom of Heaven, according to the manner of proceeding of the Society of Jesus.
+
+### 61
+
+Although this is not yet the proper time for the candidate to devote all his energies to apostolic works, he should already be conscious of himself as an authentic apostle of Jesus Christ. An authentic apostle is one who passionately loves Christ, His work, and the apostolic ideal.
+### 62
+
+The candidate is expected to cultivate an apostolic heart and an apostolic spirit, manifested first through diligent study and careful discernment, and subsequently through the acquisition of knowledge and apostolic skills. On appropriate occasions and within suitable limits, the candidate will gradually learn how to engage in apostolic activity.
+
+### 63
+
+The candidate may engage only in apostolic work that is with the approval of the Father Director.
