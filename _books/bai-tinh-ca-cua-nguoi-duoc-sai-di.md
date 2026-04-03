@@ -4,7 +4,7 @@ title: "BÀI TÌNH CA CỦA NGƯỜI ĐƯỢC SAI ĐI"
 author: "ĐA MINH TRẦN VĂN TÂN, SJ."
 date: "2025-10-19"
 tags: [TRUYỀN GIÁO, KHÁNH NHẬT TRUYỀN GIÁO]
-category: "TÀI LIỆU KHÁC"
+category: "CHỦ ĐỀ KHÁC"
 is_chapter: false
 book_id: "tlkh0001"
 ---
