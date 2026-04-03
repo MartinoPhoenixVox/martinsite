@@ -16,7 +16,7 @@ A Jesuit is a man who is deeply aware that he is a sinner yet forgiven and calle
 
 ## 3
 
-The purpose of the Society of Jesus is to follow our Lord Jesus Christ, carrying the Cross, and to be willingly sent by His Vicar on earth wherever He may chooose, and to do whatever may be required, for the greater glory of God and the more effective service of men and women today, in conformity with the spirit of contemplation in action.
+The purpose of the Society of Jesus is to follow our Lord Jesus Christ, carrying the Cross, and to be willingly sent by His Vicar on earth wherever He may choose, and to do whatever may be required, for the greater glory of God and the more effective service of men and women today, in conformity with the spirit of contemplation in action.
 
 ## 4
 
@@ -32,4 +32,4 @@ The Holy Family of Jesus is the most vivid model for the Jesuit House of Candida
 
 ## 7
 
-Today, candidates seek the mystery of the hidden life of Jesus within the context of the House of Candidacy; there they learn to live under the gaze of the loving Father. Taking up the example of Jesus the Nazarene, they strive to fulfill their daily duties in silence, love, and obedience. They desire that their will and heartsbe confromed to His, and all that they seek to do is for the service of the Father's Kingdom.
+Today, candidates seek the mystery of the hidden life of Jesus within the context of the House of Candidacy; there they learn to live under the gaze of the loving Father. Taking up the example of Jesus the Nazarene, they strive to fulfill their daily duties in silence, love, and obedience. They desire that their will and hearts be conformed to His, and all that they seek to do is for the service of the Father's Kingdom.

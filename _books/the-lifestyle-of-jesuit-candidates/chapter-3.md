@@ -88,7 +88,7 @@ Candidates are to take an active role in building a community rooted in faith. A
 
 ### 26
 
-When there is no Father Director or assistant residing in the community, candidates should view this situation as an opportunity to grow in maturity according to the priciple of "self-formation." Nevertheless, they are to meet regularly with the Father Director and reflect honestly on community life, so that he may provide appropriate guidance.
+When there is no Father Director or assistant residing in the community, candidates should view this situation as an opportunity to grow in maturity according to the principle of "self-formation." Nevertheless, they are to meet regularly with the Father Director and reflect honestly on community life, so that he may provide appropriate guidance.
 
 ### 27
 
@@ -108,14 +108,106 @@ In order to foster community life and to strengthen the spirit of service and re
 
 In accordance with the principle of "individual responsibility" and "collective collaboration," the Directorate appoints Candidate Number One and Candidate Number Two for the House of Candidacy as a whole, as well as for each community in particular. Other functions are proposed by the candidates and confirmed by the Directorate.
 
-### 31
+#### 31
 
 The common functions of the House of Candidacy are held for a period of one year and are handed over from the outgoing candidate to the incoming one. Community-level functions are held for a period of six months and are likewise handed over.
 
-#### 31a
+##### 31a
 
 Candidate Number One: Has overall responsibility for community life; maintains contact with the Directorate to coordinate activities; guides the program and lifestyle of the candidacy community; handles external correspondence; and keeps the community diary.
 
-#### 31b
+##### 31b
 
 Candidate Number Two: Replaces Candidate Number One when necessary; oversees tools, food and drink, maintenance, and the distribution of daily assignments; and keeps records of community income and expenses.
+
+##### 31c
+
+Candidate in charge of Liturgy: Responsible for ceremonies, sacred music, liturgical items, and decorations.
+
+##### 31d
+
+Candidate in charge of Education: Responsible for books, newspapers, and magazines, as well as study plans and seminar sessions.
+
+##### 31e
+
+Candidate in charge of Culture and Sports: Responsible for cultural activities, sports, decorations, and the reception of guests.
+
+#### 32
+
+In addition, other functions may be established by the community according to its particular needs.
+
+#### 33
+
+In carrying out these functions, each candidate should be aware that he is chosen to serve. He is therefore expected to take initiative, work actively, and avoid trivial rivalries or jealousies. According to their abilities, all candidates are to take turns assuming these responsibilities.
+
+#### 34
+
+In contributing to common tasks, candidates should respect the responsibilities of others and avoid interfering unnecessarily. They should learn to be guided in order to learn how to guide. Nevertheless, "not interfering" does not mean a lack of cooperation, charity, or mutual support.
+
+#### 35
+
+All daily assignments are to begin on time and are expected to be completed within the allotted time.
+
+#### 36
+
+To maintain common tools and ensure the smooth functioning of communal activities, any tool used must be returned promptly to its proper place in a clean and orderly condition, ready for further use. Any damage should be reported immediately to the person responsible so that repairs can be made in a timely manner.
+
+#### 37
+
+In fulfilling his duties and assignments, the candidate should reflect on the words of Jesus, who came "to serve, not to be served." He should be convinced that all tasks are to be done in love, since even seemingly small duties contribute to his sanctification and to the salvation of souls.
+
+#### 38
+
+Any candidate entrusted with a specific function must keep a notebook to record his duties and the related tools or materials.
+
+#### 39
+
+Each community should have a noticeboard to foster fraternal solidarity. It should display the community program, weekly activities, members' movements (where they go and when they return), and meal arrangements.
+
+#### 40
+
+Free time in the program refers to time for personal activities such as prayer, spiritual reading, reading useful books or newspapers, writing letters, bathing, washing. ironing, and similar tasks.
+
+#### 41
+
+Silence is to be observed at all times, even during recreation and relaxation. Candidates should avoid passing through areas reserved for Fathers and Brothers unless necessary
+
+#### 42
+
+Candidates should be aware of the differences between their lifestyle and schedule and those of the Fathers in the house and should exercise discretion and humility in maintaining their proper place.
+
+#### 43
+
+To become familiar with the lifestyle and activities of the House of Candidacy and of a particular community, new candidates are guided and assisted by senior candidates during the initial period.
+
+#### 44
+
+Candidates belonging to one community are not permitted to stay or live in another community without the permission of the Father Director.
+
+### Finances
+
+#### 45
+
+The candidate should accept the principle of "financial self-sufficiency" in order to respect his freedom to seek and choose to live according to the will of God, and to cultivate a sense of personal responsibility and self-reliance.
+
+#### 46
+
+The House of Candidacy gives special attention to candidates who experience genuine financial difficulties but who are outstanding in virtue and academic performance.
+
+#### 47
+
+For the sake of safety, the candidate should entrust any substantial amount of money to the care of the Father Director or the Brother Minister, keeping only what is necessary for his essential needs. For other expenses, he should approach the Minister to withdraw the required amount. In order to maintain clarity regarding his finances, the candidate is to keep a personal balance record.
+
+#### 48
+
+A candidate is not permitted to borrow or lend a large sum of money without the approval of the Father Director.
+
+#### 49
+
+In order to practice a spirit of responsible dependence, the candidate should submit his financial statement to the Father Director.
+
+## D. INTELLECT
+
+### 50
+
+Intellectual formation plays an essential role in the candidacy program because of its importance in preparing for the apostolic vocation in the Society of Jesus. Fully aware
