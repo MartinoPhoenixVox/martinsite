@@ -4,6 +4,7 @@ title: "CÁC BƯỚC XƯNG TỘI"
 author: "XỨ ĐOÀN ĐỨC MARIA - MẸ THIÊN CHÚA"
 category: "CHỦ ĐỀ KHÁC"
 tags: [XƯNG TỘI, BÍ TÍCH, BÍ TÍCH HÒA GIẢI]
+status: complete
 is_chapter: false
 book_id: "tlkh0002"
 ---

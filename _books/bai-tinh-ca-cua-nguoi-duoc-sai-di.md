@@ -5,6 +5,7 @@ author: "ĐA MINH TRẦN VĂN TÂN, SJ."
 date: "2025-10-19"
 tags: [TRUYỀN GIÁO, KHÁNH NHẬT TRUYỀN GIÁO]
 category: "CHỦ ĐỀ KHÁC"
+status: complete
 is_chapter: false
 book_id: "tlkh0001"
 ---

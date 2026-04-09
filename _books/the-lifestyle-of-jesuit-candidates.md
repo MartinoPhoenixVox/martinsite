@@ -4,6 +4,7 @@ title: "THE LIFESTYLE OF JESUIT CANDIDATES"
 author: "THE SOCIETY OF JESUS IN VIETNAM - HOUSE OF CANDIDACY"
 category: "SÁCH THIÊNG LIÊNG"
 tags: [NẾP SỐNG, ỨNG SINH, ỨNG SINH DÒNG TÊN, DÒNG TÊN, CANDIDATES, LIFESTYLE, JESUIT, JESUIT CANDIDATES]
+status: complete
 book_id: "tlie0003"
 is_chapter: false
 ---

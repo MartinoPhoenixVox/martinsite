@@ -4,6 +4,7 @@ title: "SUY CHIÊM THẾ NÀO?"
 author: "LINH MỤC PHÊRÔ PHẠM HỮU LAI, SJ."
 category: "SÁCH THIÊNG LIÊNG"
 tags: [CẦU NGUYỆN, SUY CHIÊM, ỨNG SINH, ỨNG SINH DÒNG TÊN, DÒNG TÊN]
+status: complete
 book_id: "tlie0004"
 is_chapter: false
 ---
@@ -38,7 +39,7 @@ Thử lấy Mt 6,5 mà tự cầu nguyện với câu ấy trong vòng 15 phút,
 
 ### a. Nhập nguyện
 
-#### Tạo những điều kiện thích hợp nhất.
+#### Tạo những điều kiện thích hợp nhất
 
 Trước hết, bạn hãy chọn nơi nào thích hợp nhất để cầu nguyện một mình với Chúa, sau đó bạn lấy một tư thế giúp bạn tâm nguyện lâu giờ, rồi xem cầu nguyện với Chúa Giê-su với tư cách nào và thái độ nào là thích hợp nhất để tiếp được lời dạy của Chúa Giê-su ở Mt 6,5.
 
@@ -102,7 +103,7 @@ Nguy hại vì đó là cách thờ mình mà người và mình cứ tưởng t
 
 - Ai ban thưởng? Người đời. Người cầu nguyện đi tìm tiếng khen ở người đời thì chẳng những tôn mình hơn tôn Chúa, mà còn quý lời khen của người ta hơn phần thưởng của Cha. Đó chính là tội của người Do-thái như Đức Giê-su đã nói họ: *"Tôn vinh lẫn nhau chứ không tìm kiếm vinh quang xuất phát từ Thiên Chúa duy nhất"* (Ga 5,44).
 
-##### 3) Lắng nghe chúa nói với bạn:
+##### 3) Lắng nghe chúa nói với bạn
 
 Việc cầu nguyện của con hiện nay có giúp con bớt tìm mình đi không? Tại sao?
 

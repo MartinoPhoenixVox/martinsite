@@ -5,6 +5,7 @@ author: "ĐỨC GIÁO HOÀNG PHANXICÔ"
 translator: "LM. ĐA MINH NGUYỄN ĐỨC THÔNG, CSsR"
 tags: [ĐỨC GIÁO HOÀNG, ĐỨC THÁNH CHA, ĐỨC THÁNH CHA PHANXICÔ, DIỄN VĂN]
 category: "SÁCH THIÊNG LIÊNG"
+status: complete
 is_chapter: false
 book_id: "tlie0002"
 ---
