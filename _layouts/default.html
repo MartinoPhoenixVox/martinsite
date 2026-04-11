@@ -105,50 +105,45 @@
 </head>
 <body>
     <div class="top-bar" id="topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 top-left d-xl-block d-none"><p>Ad Majorem Dei Gloriam</p></div>
-                <div class="col-xl-4 top-center"><p>Chào mừng bạn đến với Thư viện Martin!</p></div>
-                <div class="col-xl-4 top-right d-xl-block d-none">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-                        <div class="container">
-                            <a class="navbar-brand fw-bold" href="{{ '/' | relative_url }}">Martinsite</a>
-
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse" id="navbarContent">
-                                
-                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ '/' | relative_url }}">Trang chủ</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Giới thiệu</a>
-                                    </li>
-                                    
-                                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                                        <form class="d-flex" action="/search" method="get">
-                                            <input class="form-control form-control-sm me-2" type="search" placeholder="Tìm sách..." aria-label="Search">
-                                            <button class="btn btn-sm btn-primary" type="submit">Tìm</button>
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                    <div class="search-container mt-3 mb-4 text-center col-12 col-md-6 my-2">
-                        <div class="input-group mx-auto" style="max-width: 600px;">
-                            <input type="text" id="searchInput" class="form-control" placeholder="Tìm theo tên sách hoặc thẻ (ví dụ: sách thiêng liêng, đời sống thánh hiến,...)" onkeyup="liveSearch()">
-                            <span class="input-group-text bg-primary text-white"><i class="fa fa-search"></i></span>
-                        </div>
-                        <div id="searchResults" class="list-group mt-2 shadow" style="max-width: 600px; margin: 0 auto; position: absolute; left: 0; right: 0; z-index: 2000; display: none; background: white;"></div>
-                    </div>
+        <div class="container text-center text-xl-start">
+            <div class="row align-items-center">
+                <div class="col-xl-6 d-none d-xl-block">
+                    <p class="mb-0 small">Ad Majorem Dei Gloriam | Chào mừng đến với Thư viện Martin!</p>
+                </div>
+                <div class="col-xl-6 text-xl-end">
+                    <p class="mb-0 small d-xl-none">Chào mừng đến với Thư viện Martin!</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="{{ '/' | relative_url }}">Martinsite</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#martinsiteNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="martinsiteNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="{{ '/' | relative_url }}">Trang chủ</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ '/about/' | relative_url }}">Giới thiệu</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ '/thisproject/' | relative_url }}">Dự án</a></li>
+
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <div class="search-container mt-3 mb-4 text-center col-12 col-md-6 my-2">
+                            <div class="input-group mx-auto" style="max-width: 600px;">
+                                <input type="text" id="searchInput" class="form-control" placeholder="Tìm theo tên sách hoặc thẻ (ví dụ: sách thiêng liêng, đời sống thánh hiến,...)" onkeyup="liveSearch()">
+                                <span class="input-group-text bg-primary text-white"><i class="fa fa-search"></i></span>
+                            </div>
+                            <div id="searchResults" class="list-group mt-2 shadow" style="max-width: 600px; margin: 0 auto; position: absolute; left: 0; right: 0; z-index: 2000; display: none; background: white;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <main>
         {{ content }}
@@ -216,10 +211,5 @@
             }
         });
     </script>
-    <script src="{{ '/Js/jquery-3.7.1.min.js' | relative_url }}"></script>
-    <script src="{{ '/Js/bootstrap.bundle.min.js' | relative_url }}"></script>
-    <script src="{{ '/Js/jquery-ui.min.js' | relative_url }}"></script>
-    <script src="{{ '/Js/owl.carousel.js' | relative_url }}"></script>
-    <script src="{{ '/Js/easyzoom.js' | relative_url }}"></script>
 </body>
 </html>
