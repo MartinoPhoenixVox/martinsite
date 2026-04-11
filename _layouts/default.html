@@ -114,31 +114,27 @@
                         <div class="container">
                             <a class="navbar-brand fw-bold" href="{{ '/' | relative_url }}">Martinsite</a>
 
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#martinsiteNav" aria-controls="martinsiteNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
 
-                            <div class="collapse navbar-collapse" id="martinsiteNav">
+                            <div class="collapse navbar-collapse" id="navbarContent">
                                 
                                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="{{ '/' | relative_url }}">Trang chủ</a>
+                                        <a class="nav-link" href="{{ '/' | relative_url }}">Trang chủ</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Giới thiệu</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Dự án</a>
-                                    </li>
-
-                                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                                        <form class="d-flex" action="#" method="get">
-                                            <input class="form-control form-control-sm me-2" type="search" id="headerSearchInput" placeholder="Tìm sách..." aria-label="Search">
+                                    
+                                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                                        <form class="d-flex" action="/search" method="get">
+                                            <input class="form-control form-control-sm me-2" type="search" placeholder="Tìm sách..." aria-label="Search">
                                             <button class="btn btn-sm btn-primary" type="submit">Tìm</button>
                                         </form>
                                     </li>
                                 </ul>
-
                             </div>
                         </div>
                     </nav>
@@ -220,5 +216,10 @@
             }
         });
     </script>
+    <script src="{{ '/Js/jquery-3.7.1.min.js' | relative_url }}"></script>
+    <script src="{{ '/Js/bootstrap.bundle.min.js' | relative_url }}"></script>
+    <script src="{{ '/Js/jquery-ui.min.js' | relative_url }}"></script>
+    <script src="{{ '/Js/owl.carousel.js' | relative_url }}"></script>
+    <script src="{{ '/Js/easyzoom.js' | relative_url }}"></script>
 </body>
 </html>
