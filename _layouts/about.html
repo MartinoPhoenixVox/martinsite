@@ -71,14 +71,6 @@ layout: default
 </style>
 
 <script>
-    // Tự động lưu vị trí sau khi người dùng ngừng cuộn 2 giây
-    let isScrolling;
-    window.addEventListener('scroll', function (event) {
-        window.clearTimeout(isScrolling);
-        isScrolling = setTimeout(function() {
-        localStorage.setItem('bookmark_pos_' + pageId, window.scrollY);
-        }, 2000);
-    }, false);
 
     // Logic Dark Mode, Cỡ chữ, Dấu trang (Giống bản trước tớ đã viết cho cậu)
     function setTheme(t){ document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
@@ -90,8 +82,6 @@ layout: default
         c.style.fontSize = s+"%"; v.innerText = s+"%";
         localStorage.setItem('fSize', s);
     }
-    const pId = window.location.pathname;
-    function saveBookmark(){ localStorage.setItem('mark_'+pId, window.scrollY); alert("Đã lưu vị trí!"); }
 
     window.onload = () => {
         const t = localStorage.getItem('theme') || 'light'; setTheme(t);
