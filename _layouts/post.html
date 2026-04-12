@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="chapter-nav-top" style="position: sticky; top: 0; background: var(--nav-bg, #ffffff); z-index: 1000; border-bottom: 1px solid #eee; padding: 10px 0; margin-top: -2px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+<div class="chapter-nav-top" style="position: sticky; top: 56px; background: var(--nav-bg, #ffffff); z-index: 1000; border-bottom: 1px solid #eee; padding: 10px 0; margin-top: -2px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
     <div class="container d-flex justify-content-between align-items-center">
         
         {% comment %} 1. CHỈ CHẠY LOGIC NẾU ĐÂY LÀ MỘT CHƯƠNG {% endcomment %}
@@ -67,7 +67,7 @@ layout: default
             {% if page.is_chapter != true %}
                 {% comment %} 1. Lấy danh sách chương của RIÊNG sách này {% endcomment %}
                 {% assign current_book_chapters = site.books | where: "book_id", page.book_id | where: "is_chapter", true | sort: "order" %}
-                
+                chapter
                 {% comment %} 2. CHỈ hiện khung Mục lục nếu danh sách chương không rỗng {% endcomment %}
                 {% if current_book_chapters.size > 0 %}
                     <div class="chapter-list mt-4">
