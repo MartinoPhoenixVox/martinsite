@@ -36,13 +36,6 @@ layout: default
             <button class="btn btn-sm btn-light border w-100" onclick="setTheme('light')">Sáng</button>
             <button class="btn btn-sm btn-dark w-100" onclick="setTheme('dark')">Tối</button>
         </div>
-        <label class="small fw-bold">Cỡ chữ:</label>
-        <div class="d-flex align-items-center gap-2 mb-2">
-            <button class="btn btn-sm btn-outline-secondary" onclick="changeFontSize('decrease')">-</button>
-            <span id="font-val">100%</span>
-            <button class="btn btn-sm btn-outline-secondary" onclick="changeFontSize('increase')">+</button>
-        </div>
-        <button class="btn btn-sm btn-primary w-100" onclick="saveBookmark()">📍 Lưu dấu trang</button>
     </div>
 </div>
 
@@ -71,17 +64,8 @@ layout: default
 </style>
 
 <script>
-
-    // Logic Dark Mode, Cỡ chữ, Dấu trang (Giống bản trước tớ đã viết cho cậu)
+    // Logic Dark Mode cho trang About
     function setTheme(t){ document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
-    function changeFontSize(a){
-        let c = document.getElementById('book-content');
-        let v = document.getElementById('font-val');
-        let s = parseInt(v.innerText);
-        s = (a==='increase')? s+10 : (a==='decrease')? s-10 : 100;
-        c.style.fontSize = s+"%"; v.innerText = s+"%";
-        localStorage.setItem('fSize', s);
-    }
 
     window.onload = () => {
         const t = localStorage.getItem('theme') || 'light'; setTheme(t);
