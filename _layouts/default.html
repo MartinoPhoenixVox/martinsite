@@ -195,6 +195,20 @@
                 document.getElementById('searchResults').style.display = 'none';
             }
         });
+
+        function updateNavHeight() {
+            // Lấy chiều cao thực tế của Navbar chính
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                const height = navbar.offsetHeight;
+                // Lưu chiều cao vào biến CSS của toàn bộ trang
+                document.documentElement.style.setProperty('--nav-height', height + 'px');
+            }
+        }
+
+        // Chạy khi trang tải xong và khi xoay màn hình/đổi kích thước
+        window.addEventListener('load', updateNavHeight);
+        window.addEventListener('resize', updateNavHeight);
     </script>
 </body>
 </html>
