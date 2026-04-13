@@ -132,3 +132,51 @@ Trong các biến cố được nhìn lại, bạn cần phải xem cái gì tro
 ### c. Kết nguyện
 
 Như vậy, Chúa yêu bạn như thế nào? Chúa muốn bạn cầu nguyện, sống và thực hiện quyết tâm như thế nào? Hãy trả lời cho Chúa. Rồi kết thúc. Nên ghi lại kết quả một cách đầy đủ, chính xác, rõ ràng và ngắn gọn.
+
+## 2. Phân tích để hiểu rõ
+
+### a. Nhận định để làm gì?
+
+### b. Nhận những gì?
+
+### c. Nhận định các ơn?
+
+1- Có những loại ơn nào?
+
+2- Nhận ra các ơn để làm gì?
+
+3- Làm sao để nhận ra các ơn?
+
+4- Khi đã nhận ra các ơn thì phải làm gì?
+
+### d. Nhận định cách cầu nguyện Chúa chỉ
+
+1- Nhận định cách cầu nguyện để làm gì?
+
+2- Làm sao nhận ra cách cầu nguyện Chúa chỉ?
+
+3- Khi đã nhận ra cách cầu nguyện Chúa chỉ, thì phải làm thế nào?
+
+### đ. Nhận định lối sống Chúa muốn
+
+1- Nhận định lối sống Chúa muốn để làm gì?
+
+2- Làm sao nhận ra lối sống Chúa muốn?
+
+3- Khi đã nhận ra lối sống Chúa muốn thì ta phải làm thế nào?
+
+### e. Nhận định cách sống quyết tâm
+
+1- Bạn đang có những quyết tâm nào?
+
+2- Nhận định lối sống quyết tâm để làm gì?
+
+3- Muốn nhận ra cách sống quyết tâm mà Chúa muốn thì phải làm thế nào?
+
+4- Khi đã nhận ra thì phải làm thế nào?
+
+### f. Kết thúc
+
+1- Để kết thúc, phải làm những gì?
+
+2- Tại sao phải làm những công việc ấy?
