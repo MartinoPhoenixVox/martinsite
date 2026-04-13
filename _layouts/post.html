@@ -117,20 +117,36 @@ layout: default
     // Tự động lưu vị trí sau khi người dùng ngừng cuộn 2 giây
     let isScrolling;
     window.addEventListener('scroll', function (event) {
-      window.clearTimeout(isScrolling);
-      isScrolling = setTimeout(function() {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(function() {
         localStorage.setItem('bookmark_pos_' + pageId, window.scrollY);
-      }, 2000);
+        }, 2000);
     }, false);
 
     // Logic Dark Mode, Cỡ chữ, Dấu trang (Giống bản trước tớ đã viết cho cậu)
     function setTheme(t){ document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
-    function changeFontSize(a){
-        let c = document.getElementById('book-content');
+    function changeFontSize(a) {
+        // Thay vì chỉ lấy 'book-content', ta lấy thẻ bao ngoài cùng của bài viết
+        // Hoặc đơn giản là lấy thẻ cha chứa cả tiêu đề h1 và nội dung
+        let container = document.querySelector('.col-lg-8'); 
         let v = document.getElementById('font-val');
         let s = parseInt(v.innerText);
-        s = (a==='increase')? s+10 : (a==='decrease')? s-10 : 100;
-        c.style.fontSize = s+"%"; v.innerText = s+"%";
+
+        s = (a === 'increase') ? s + 10 : (a === 'decrease') ? s - 10 : 100;
+        
+        // Áp dụng cho toàn bộ container (bao gồm h1, h2, p,...)
+        if (container) {
+            container.style.fontSize = s + "%";
+            
+            // Đảm bảo các tiêu đề bên trong cũng thừa hưởng tỉ lệ này
+            // (Bootstrap đôi khi ép cỡ chữ cố định, dòng này sẽ giải quyết)
+            container.querySelectorAll('h1, h2, h3, h4, h5').forEach(header => {
+                header.style.fontSize = "calc(1em + 0.5rem)"; // Hoặc để trống để nó tự scale theo % của cha
+                header.style.fontSize = "inherit"; // Ép nó kế thừa % từ container
+            });
+        }
+
+        v.innerText = s + "%";
         localStorage.setItem('fSize', s);
     }
     const pId = window.location.pathname;
