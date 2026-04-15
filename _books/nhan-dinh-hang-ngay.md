@@ -4,8 +4,8 @@ title: "NHẬN ĐỊNH HẰNG NGÀY"
 author: "LINH MỤC PHÊRÔ PHẠM HỮU LAI, SJ."
 category: "SÁCH THIÊNG LIÊNG"
 tags: [CẦU NGUYỆN, NHẬN ĐỊNH, PHÚT HỒI TÂM, ỨNG SINH, ỨNG SINH DÒNG TÊN, DÒNG TÊN]
-status: incomplete
-book_id: "tlie0004"
+status: complete
+book_id: "tlie0005"
 is_chapter: false
 ---
 
