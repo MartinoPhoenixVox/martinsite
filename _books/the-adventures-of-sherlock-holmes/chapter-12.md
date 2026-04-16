@@ -29,7 +29,7 @@ It was dated from Montague Place upon the preceding evening, and ran thus:
 <br/>
 <br/>
 
-“DEAR MR. HOLMES:—I am very anxious to consult you as to whether I should or should not accept a situation which has been offered to me as governess. I shall call at half-past ten to-morrow if I do not inconvenience you. Yours faithfully,</p>
+“DEAR MR. HOLMES:—I am very anxious to consult you as to whether I should or should not accept a situation which has been offered to me as governess. I shall call at half-past ten to-morrow if I do not inconvenience you. Yours faithfully,
 <p class="c5"><br/>
 “VIOLET HUNTER.”</p>
 
@@ -190,7 +190,7 @@ The summons was a brief and urgent one.
 <br/>
 <br/>
 
-“Please be at the Black Swan Hotel at Winchester at midday to-morrow,” it said. “Do come! I am at my wit’s end.</p>
+“Please be at the Black Swan Hotel at Winchester at midday to-morrow,” it said. “Do come! I am at my wit’s end.
 <p class="c5"><br/>
 “HUNTER.”</p>
 
