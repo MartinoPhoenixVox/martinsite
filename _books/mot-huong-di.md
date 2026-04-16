@@ -23,7 +23,7 @@ là con người được sống viên mãn."
 
 <u>Facebook Fanpage</u>
 
-[**Ơn Gọi Dòng Tên<br>Vietnam Jesuit Vocation**](https://www.facebook.com/OnGoiSJ)
+[**Ơn Gọi Dòng Tên<br/>Vietnam Jesuit Vocation**](https://www.facebook.com/OnGoiSJ)
 
 <u>Facebook Fanpage</u>
 
